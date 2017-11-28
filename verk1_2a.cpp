@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+#include <fstream>
 using namespace std;
 
 class superhero {
@@ -45,7 +46,6 @@ public:
 };
 
 
-
 superhero::superhero (void){
 	name = "";
 	age = 0;
@@ -63,3 +63,20 @@ void superhero::setVerbose(bool b){
 	verbose = b;
 };
 
+
+
+int main(){
+
+  superhero super;
+  super.setVerbose(true);
+  cout << "Hello" << endl;
+  cin >> super;
+
+  super.setVerbose(false);
+  ofstream ofs;
+  ofs.open("test1_2a.txt");
+  //ofs.write((char*)(&super), sizeof(superhero));
+  
+  ofs << super;
+ 
+}
