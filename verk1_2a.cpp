@@ -6,23 +6,41 @@ class superhero {
 	string name;
 	int age;
 	char power;
+	bool verbose;
 public:
 	superhero();
 	superhero(string n, int a, char o);
-	void printvalues(void);		
+	void printvalues(void);
+	void setVerbose(bool b);
 	friend istream& operator >> (istream& in, superhero& sup){
+		if(sup.verbose){
 		cout<<"Name: ";
+		};
 		in>>sup.name;
+		if(sup.verbose){
 		cout<<"Age: ";
+		};
 		in>>sup.age;
+		if(sup.verbose){
 		cout<<"Power: ";
+		};
 		in>>sup.power;
 		return in;
 	};
 	friend ostream& operator << (ostream& out, const superhero& sup){
-		out<<"Name: "<<sup.name<<endl;
-		out<<"Age: "<<sup.age<<endl;
-		out<<"Power: "<<sup.power<<endl;
+		if(sup.verbose){
+		out<<"Name: ";
+		};
+		out<<sup.name<<endl;
+		if(sup.verbose){
+		out<<"Age: ";
+		};
+		out<<sup.age<<endl;
+		if(sup.verbose){
+		out<<"Power: ";
+		};
+		out<<sup.power<<endl;
+		return out;
 	};
 };
 
@@ -32,6 +50,7 @@ superhero::superhero (void){
 	name = "";
 	age = 0;
 	power = 'n';
+	verbose = true;
 };
 
 superhero::superhero (string n, int a, char o){
@@ -40,15 +59,7 @@ superhero::superhero (string n, int a, char o){
 	power = o;
 }
 
-void superhero::printvalues(void){
-	cout<<"name: "<<name<<endl<<"Age: "<<age<<endl<<"Power: "<<power<<endl;
+void superhero::setVerbose(bool b){
+	verbose = b;
 };
-
-int main(){
-	cout<<"Hello"<<endl;
-	superhero super;
-	cin>>super;
-	cout<<super;
-	return 0;
-}
 
