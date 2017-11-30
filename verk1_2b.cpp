@@ -5,10 +5,12 @@
 using namespace std;
 
 class superhero {
-	string name;
-	int age;
-	char power;
-	bool verbose;
+	public:
+		string name;
+	private: 
+		int age;
+		char power;
+		bool verbose;
 public:
 	superhero();
 	superhero(string n, int a, char o);
@@ -65,6 +67,7 @@ void superhero::setVerbose(bool b){
 };
 
 int main(){
+	
 	//create a vector with size 0 of class superhero;
 	vector<superhero> supers;
 	char cont;
@@ -72,46 +75,60 @@ int main(){
 	cout<<"Do you want to record a superhero? (y/n)"<<endl;
 	cin>>cont;
 	int c = 0;
-	//while loop that lets the user record as many superheroes as he wants.
-	while (cont == 'y'){
-		superhero s;
-		supers.push_back(s);
-		cin>>supers[c];
-		cout<<endl;
-		cout<<"Do you want to record another hero? (y/n)"<<endl;
-		cin>>cont;
-		cout<<endl;
-		c++;
-	};
 	
-	ofstream fout;
-	
-	fout.open("binarySuperhero.dat", ios::binary | ios::app);
-	fout.seekp (0, fout.end);
-	fout.write((char*)(&supers), sizeof(superhero) * c);
-	fout.close();
+	if (cont == 'y') {
+			
+		//while loop that lets the user record as many superheroes as he wants.
+		while (cont == 'y'){
+			superhero s;
+			supers.push_back(s);
+			cin>>supers[c];
+			cout<<endl;
+			cout<<"Do you want to record another hero? (y/n)"<<endl;
+			cin>>cont;
+			cout<<endl;
+			c++;
+		};
+		ofstream fout;
 		
+		fout.open("binarySuperhero.dat", ios::out | ios::binary | ios::app);
+		
+		//fout.seekp (0, fout.end);
+		
+		fout.write((char*) &supers, sizeof(superhero) * c);
+		cout << "Writing superhero to file" << endl;
+		fout.close();
+	}
 	ifstream fin;
 	vector<superhero> supers2;
-	//SEGMENTATION FAULT!!!!! vantar sennilega '\0'
-	fin.open("binarySuperhero.dat", ios::binary );
+	int length = 0;
+	fin.open("binarySuperhero.dat", ios::in | ios::binary);
 	if(fin.is_open()){
 		fin.seekg (0, fin.end);
-		int length = fin.tellg();
+		cout << "Opening file for read" << endl;
+		length = fin.tellg() / sizeof(superhero);
 		fin.seekg(0, fin.beg);
-		fin.read((char*) (&supers2), length);
+		
+		superhero* heroes = new superhero[length];
+				
+		cout << "length: " << length << endl;
+				
+		fin.read((char*) &heroes, sizeof(superhero) * length);
+		cout << "About to close the file" << endl;
 		fin.close();
 		
 		int i = 0;
-		while(i<c){
-		cout<<supers2[i];
-		cout<<endl;
-		i++;
-	};
+		while(i < length){
+			//cout<<supers2.size()<<endl;
+			//cout<<supers2[i];
+			cout<< heroes[i].name << endl;
+			i++;
+		}
 	}else{
 		cout<<"Could not open file"<<endl;
 	};
+
 	
 
 	return 0;
-}
+}	
