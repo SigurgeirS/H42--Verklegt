@@ -1,9 +1,6 @@
 #include <iostream>
-#include <string>
 #include <fstream>
-#include <vector>
 #include <string.h>
-#include <stdio.h>
 using namespace std;
 
 class superhero {
@@ -68,36 +65,27 @@ void superhero::setVerbose(bool b){
 };
 
 int main(){
-	
-	//create a vector with size 0 of class superhero;
-	//vector<superhero> supers;
+	//Ask user how many heroes he wants to record:
 	cout<<"How many superheros do you want to record? "<<endl;
 	int numb = 0;
 	cin>>numb;
+	//Create dynamic array of superheroes:
 	superhero* heroes1 = new superhero[numb];
-	char cont;
-	//Ask the user if he wants to record a superhero.
-	//cout<<"Do you want to record a superhero? (y/n)"<<endl;
-	//cin>>cont;
+	//Counter that is used to insert data into the array:
 	int c = 0;
 	
 	if (numb > 0) {
 			
-		//while loop that lets the user record as many superheroes as he wants.
+		//while loop that asks the user for data to put into the array:
 		while (c < numb){
 			cin>>heroes1[c];
 			cout<<endl;
 			c++;
 		};
-		cout<<heroes1[0]<<endl;
+		//Writing the array into a binary file:
 		ofstream fout;
-		
 		fout.open("binarySuperhero.dat", ios::binary | ios::app);
-		
-		//fout.seekp (0, fout.end);
-		
 		fout.write((char*) heroes1, sizeof(superhero) * c);
-		cout << "Writing superhero to file" << endl;
 		fout.close();
 	}
 	
@@ -108,18 +96,25 @@ int main(){
 	fin.open("binarySuperhero.dat", ios::binary);
 	if(fin.is_open()){
 		fin.seekg (0, fin.end);
+		//Check how many superheroes there are in the file:
 		length = fin.tellg() / sizeof(superhero);
 		fin.seekg(0, fin.beg);
+		//Create dynamic array to hold the superheroes that are read from the file:
 		superhero* heroes2 = new superhero[length];		
 				
 		fin.read((char*) heroes2, sizeof(superhero) * length);
 		fin.close();
 		
 		int i = 0;
+		cout<<"--------------------"<<endl;
+		cout<<"All recorded heroes:"<<endl;
+		cout<<"--------------------"<<endl;
+		//While loop that prints the content of the binary file:
 		while(i < length){
 			cout<< heroes2[i]<< endl;
 			i++;
 		}
+		
 		delete [] heroes2;
 		
 	}else{
@@ -128,4 +123,4 @@ int main(){
 	
 
 	return 0;
-}	
+}
