@@ -14,18 +14,39 @@ void MainUI::startUI()
 
     while(selection != 'q')
     {
-        cout << "p: pizzas" << endl;
+        cout << "a: Admin" << endl;
+        cout << "s: Sales" << endl;
+        cout << "b: Baking" << endl;
+        cout << "d: Delivery" << endl;
         cin >> selection;
         switch(selection)
         {
-        case 'p':
-        {
+      case 'a': {
             PizzaUI pizzaui;
             pizzaui.startUI();
             cout << endl;
         }
         break;
         }
+      case 's': {
+        SalesUI salesui;
+        salesui.startUI();
+        cout << endl;
+        }
+        break;
+      case 'b': {
+        BakingUI bakingui;
+        bakingui.startUI();
+        cout << endl;
+        }
+        break;
+      case 'd': {
+        DeliveryUI deliveryui;
+        deliveryui.startUI();
+        cout << endl;
+        }
+        break;
+      
     }
 }
 
