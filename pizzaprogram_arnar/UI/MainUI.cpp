@@ -27,27 +27,28 @@ void MainUI::startUI()
             cout << endl;
         }
         break;
-        }
+
       case 's': {
-        SalesUI salesui;
-        salesui.startUI();
+        /*SalesUI salesui;
+        salesui.startUI();*/
         cout << endl;
         }
         break;
       case 'b': {
-        BakingUI bakingui;
-        bakingui.startUI();
+        /*BakingUI bakingui;
+        bakingui.startUI();*/
         cout << endl;
         }
         break;
       case 'd': {
-        DeliveryUI deliveryui;
-        deliveryui.startUI();
+        /*DeliveryUI deliveryui;
+        deliveryui.startUI();*/
         cout << endl;
         }
         break;
-      
+
     }
+}
 }
 
 MainUI::~MainUI()
