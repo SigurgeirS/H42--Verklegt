@@ -5,28 +5,33 @@ This class holds our Topping (in this case we just expect that we only choice on
 */
 Topping::Topping()
 {
-    //ctor
+  ID = 0;
 }
 
-Topping::Topping(char* name, double price)
+void auto_increment_id()
 {
-    strcpy(this->name, name);
-    this->price = price;
+
 }
 
-
-istream& operator >>(istream& in, Topping& topping)
+int Topping::get_id()
 {
-    cout << "Name: ";
+    return ID;
+}
+
+istream& operator >> (istream& in, Topping& topping)
+{
+    cout << "Type in an topping ID: " << endl;
+    in >> topping.ID;
+    cout << "Type in an topping name: " << endl;
     in >> topping.name;
-    cout << "Price: ";
+    cout << "Type in an topping price: " << endl;
     in >> topping.price;
     return in;
 }
 
 ostream& operator << (ostream& out,const Topping topping)
 {
-    out << topping.name << " " << topping.price;
+    out << topping.ID << " " << topping.name << " " << topping.price << endl;
     return out;
 }
 Topping::~Topping()

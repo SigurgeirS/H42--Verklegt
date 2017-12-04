@@ -1,5 +1,6 @@
 #include "Pizza.h"
 #include <stddef.h>
+#include<sstream>
 /*Holds information about our pizza*/
 Pizza::Pizza()
 {
@@ -10,10 +11,6 @@ Pizza::Pizza()
 Pizza::Pizza(int numberOfToppings)
 {
     initalize(numberOfToppings);
-}
-Pizza::~Pizza()
-{
-    clean();
 }
 
 void Pizza::initalize(int numberOfToppings)
@@ -34,14 +31,34 @@ void Pizza::addTopping(Topping topping)
     }
 }
 
+//Returns a line after an ID (Expecting a line starting with an ID, no spaces and ID is a number)
+bool Pizza::find_line(string line,int id_input){
+    //A small part of this code was taken from:
+    //http://www.cplusplus.com/articles/D9j2Nwbp/
+
+     ostringstream convert;//Stream used for the conversion.
+     convert << id_input;
+     string id_input_string = convert.str();
+     string id = "";
+    for(unsigned int i = 0; i < line.length(); i++){
+            if(line[i] == ' '){
+                break;
+            }
+        id += line[i];
+    }
+    if(id_input_string == id){
+        return true;
+    }
+    return false;
+}
+
 ostream& operator << (ostream& out, const Pizza& pizza)
 {
-
     out << pizza.toppingcount << " ";
-    for(int i = 0; i < pizza.toppingcount; i++)
-    {
+    for(int i = 0; i < pizza.toppingcount; i++){
         out << pizza.toppings[i] << " ";
     }
+
     return out;
 }
 
@@ -63,11 +80,16 @@ istream& operator >>(istream& in, Pizza& pizza)
 
 void Pizza::clean()
 {
-    if(toppings != 0)
+    if(toppings != NULL)
     {
-        delete[] toppings;
+       delete[] toppings;
     }
     toppingcount = 0;
     toppings = NULL;
     currenttopping_Num = 0;
+}
+
+Pizza::~Pizza()
+{
+    clean();
 }

@@ -14,6 +14,7 @@ void MainUI::startUI()
 
     while(selection != 'q')
     {
+        system("CLS");
         cout << "a: Admin" << endl;
         cout << "s: Sales" << endl;
         cout << "b: Baking" << endl;

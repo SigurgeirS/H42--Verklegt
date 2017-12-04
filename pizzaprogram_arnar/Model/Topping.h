@@ -7,15 +7,16 @@ class Topping
 {
 public:
     Topping();
-    Topping(char* name, double price);
     friend ostream& operator << (ostream& out, const Topping topping);
     friend istream& operator >>(istream& in, Topping& topping);
+    int get_id();
     virtual ~Topping();
 
 private:
     char name[32];
     double price;
-
+    int ID;
+    string toppingline;
 };
 
 #endif // TOPPING_H

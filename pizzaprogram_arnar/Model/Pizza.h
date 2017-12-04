@@ -14,6 +14,7 @@ public:
     void initalize(int numberOfTopings);
     void clean();
     void addTopping(Topping topping);
+    bool find_line(string line,int id_input);
     friend istream& operator >>(istream& in, Pizza& pizza);
 protected:
 
