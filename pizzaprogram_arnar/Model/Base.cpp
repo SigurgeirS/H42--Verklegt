@@ -11,7 +11,7 @@ Base::~Base()
     //dtor
 }
 
-int Base::get_id(){
+string Base::get_id(){
     return ID;
 }
 

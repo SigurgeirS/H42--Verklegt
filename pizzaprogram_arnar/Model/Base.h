@@ -1,6 +1,8 @@
 #ifndef BASE_H
 #define BASE_H
 #include<iostream>
+#include<string>
+
 using namespace std;
 class Base
 {
@@ -8,13 +10,13 @@ class Base
         Base();
         friend ostream& operator << (ostream& out, Base base);
         friend istream& operator >>(istream& in, Base& base);
-        int get_id();
+        string get_id();
         virtual ~Base();
 
     protected:
 
     private:
-        int ID;
+        string ID;
         double price;
         string base_name;
 };
