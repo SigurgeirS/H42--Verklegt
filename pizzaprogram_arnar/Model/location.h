@@ -7,13 +7,13 @@ using namespace std;
 
 class location {
 	private:
-		int ID;
+		string ID;
 		string name;
 		string address;
 	public:
 		location();
-		location(int id, int n, int addr);
-		
+		string getID();
+
 		friend istream& operator >> (istream& in, location& loc);
 		friend ostream& operator << (ostream& out, location &loc);
 };
