@@ -5,7 +5,7 @@ Pizza_size::Pizza_size()
 {
     this->price = 0;
     this->ID = 0;
-    this->name = "";
+    this->size = 0;
 }
 
 Pizza_size::~Pizza_size()
@@ -14,16 +14,16 @@ Pizza_size::~Pizza_size()
 }
 
 istream& operator >> (istream& in, Pizza_size& pizza_size){
-    cout << "Type in a size: " << endl;
+    cout << "Type in a size ID: " << endl;
     in >> pizza_size.ID;
-    cout << "Type a size name: ";
-    in >> pizza_size.name;
+    cout << "Type in a size:";
+    in >> pizza_size.size;
     cout << "Type in a pizza size price: " << endl;
     in >> pizza_size.price;
     return in;
 }
 
 ostream& operator << (ostream& out,const Pizza_size& pizza_size){
-    out << pizza_size.ID << pizza_size.name << " " << pizza_size.price << endl;
+    out << pizza_size.ID << " " << pizza_size.size << " " << pizza_size.price << endl;
     return out;
 }

@@ -16,7 +16,7 @@ class Pizza_size
     private:
         int ID;
         double price;
-        string name;
+        int size;
 };
 
 #endif // PIZZA_SIZE_H

@@ -6,6 +6,9 @@
 #include "../Repo/PizzaRepository.h"
 #include "../Model/Pizza_size.h"
 #include "../Repo/Find_line.h"
+#include "../Model/Pizza_menu.h"
+#include "../UI/ToppingsUI.h"
+#include "../Domain/Admin_domain.h"
 #include<iostream>
 
 using namespace std;
@@ -13,14 +16,15 @@ PizzaUI::PizzaUI()
 {
 }
 
-PizzaRepository PizzaUI::get_pizzarepo(){
-    PizzaRepository pizzarepo;
-    return pizzarepo;
-}
-
 Find_line PizzaUI::get_find_line(){
      Find_line findline;
      return findline;
+}
+
+void display(string* toppings, int topCnt){
+    for(int i = 0; i < topCnt; i++){
+            cout << toppings[i] << endl;
+        }
 }
 /*Displays recorded data more user friendly*/
 
@@ -41,14 +45,19 @@ Find_line PizzaUI::get_find_line(){
     }
 }
 */
-void goback(){
+Admin_domain PizzaUI::get_admin_domain(){
+    Admin_domain admindomain;
+    return admindomain;
+}
+
+void PizzaUI::goback(){
     cout << endl;
     string a = "";
     cout << "Press any key to go back..." << endl;
     cin >> a;
 }
 /*Reads lines from an array*/
-void display(int counter, string* line_array){
+void PizzaUI::display(int counter, string* line_array){
      cout << "=====================================================" << endl;
      for(int i = 0; i < counter; i++){
         cout << line_array[i] << endl;
@@ -58,40 +67,36 @@ void display(int counter, string* line_array){
 /*Record toppings to a file*/
 void PizzaUI::record_toppings()
 {
+//    string* toppings;
     int topCnt = 0;
     cout << "How many toppings: " << endl;
     cin >> topCnt;
-    string* toppings = new string[topCnt];
     for(int i = 0; i < topCnt; i++)
     {
         Topping topping;
         cin >> topping;
-        get_pizzarepo().storeToppings(topping);
-        //Pizza.addTopping(topping);
-
-        toppings[i] = get_pizzarepo().read_toppings(topping.get_id());
+        get_admin_domain().record_toppings(topping);
     }
-        cout << endl;
+        /*cout << endl;
+        Topping topping;
         cout << "Toppings recorded:" << endl;
-        display(topCnt,toppings);
-        delete[] toppings;
+        display(toppings,topCnt);//Displays the toppings*/
 }
+
 /*Records some bases to a file*/
 void PizzaUI::record_base(){
     int baseCnt = 0;
     cout << "How many bases: " << endl;
     cin >> baseCnt;
-    string* bases = new string[baseCnt];
-
+    //string* bases = new string[baseCnt];
     for(int i = 0; i < baseCnt; i++){
         Base base;
         cin >> base;
-        get_pizzarepo().storeBase(base);
-        bases[i] = get_find_line().retrieveItem("pizzabase.txt",base.get_id());
+        get_admin_domain().record_base(base);
     }
 
-    display(baseCnt,bases);
-    delete[] bases;
+    /*display(baseCnt,bases);
+    delete[] bases;*/
 }
 /*Record sizes to a file*/
 void PizzaUI::record_sizes(){
@@ -103,11 +108,24 @@ void PizzaUI::record_sizes(){
     for(int i = 0; i < sizeCnt; i++){
         Pizza_size pizza_size;
         cin >> pizza_size;
-        get_pizzarepo().storeSize(pizza_size);
+        get_admin_domain().record_size(pizza_size);
     }
     display(sizeCnt,sizes);
     delete[] sizes;
 }
+
+void PizzaUI::record_menu(){
+     ToppingsUI toppingsui;
+     int pizzaCnt = 0;
+     cout << "How many pizzas on the menu: " << endl;
+     cin >> pizzaCnt;
+
+     for(int i = 0; i < pizzaCnt; i++){
+          cout << "Pick a topping: " << endl;
+          toppingsui.startUI();
+     }
+}
+
 void PizzaUI::startUI()
 {
     int selection = 0;
@@ -146,6 +164,11 @@ void PizzaUI::startUI()
             goback();
         }
         break;
+
+        case 4:
+            record_menu();
+            goback();
+            break;
         }
     }
     MainUI mainui;

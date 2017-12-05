@@ -32,17 +32,27 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
-		<Unit filename="Model/Pizza.cpp" />
+		<Unit filename="Model/Base.cpp" />
+		<Unit filename="Model/Base.h" />
 		<Unit filename="Model/Pizza.h" />
+		<Unit filename="Model/Pizza_size.cpp" />
+		<Unit filename="Model/Pizza_size.h" />
 		<Unit filename="Model/Topping.cpp" />
 		<Unit filename="Model/Topping.h" />
-		<Unit filename="Model/pizzas.txt" />
+		<Unit filename="Repo/Find_line.cpp" />
+		<Unit filename="Repo/Find_line.h" />
+		<Unit filename="Repo/OrderRepository.cpp" />
+		<Unit filename="Repo/OrderRepository.h" />
 		<Unit filename="Repo/PizzaRepository.cpp" />
 		<Unit filename="Repo/PizzaRepository.h" />
 		<Unit filename="UI/MainUI.cpp" />
 		<Unit filename="UI/MainUI.h" />
+		<Unit filename="UI/OrderUI.cpp" />
+		<Unit filename="UI/OrderUI.h" />
 		<Unit filename="UI/PizzaUI.cpp" />
 		<Unit filename="UI/PizzaUI.h" />
+		<Unit filename="UI/ToppingsUI.cpp" />
+		<Unit filename="UI/ToppingsUI.h" />
 		<Unit filename="main.cpp" />
 		<Extensions>
 			<code_completion />

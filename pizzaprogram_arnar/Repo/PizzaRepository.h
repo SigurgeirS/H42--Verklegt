@@ -4,6 +4,7 @@
 #include "../Model/Pizza_size.h"
 #include "../Model/Topping.h"
 #include "../Repo/Find_line.h"
+
 class PizzaRepository
 {
 public:
@@ -12,7 +13,7 @@ public:
     void storeToppings(const Topping& topping);
     void storeBase(const Base& base);
     void storeSize(const Pizza_size& pizza_size);
-    Find_line get_find_line();
+//    Find_line get_find_line();
     string read_toppings(int ID);
     virtual ~PizzaRepository();
 

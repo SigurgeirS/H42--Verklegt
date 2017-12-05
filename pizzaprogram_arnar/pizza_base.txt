@@ -1,2 +1,1 @@
-1 normal 3
-4 lala 5
+1 Panna 3

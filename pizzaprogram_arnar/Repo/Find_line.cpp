@@ -1,5 +1,6 @@
 ///This class finds a line with ID as an input and returns the correct line.
 #include "Find_line.h"
+#include "../Domain/Admin_domain.h"
 #include<sstream>
 #include<fstream>
 #include<vector>
@@ -12,34 +13,20 @@ Find_line::~Find_line()
 {
     //dtor
 }
-
-//Returns a line after an ID (Expecting a line starting with an ID, no spaces and ID is a number)
-bool Find_line::find_ID(string line,int id_input){
-     ostringstream convert;//Stream used for the conversion.
-     convert << id_input;
-     string id_input_string = convert.str();
-     string id = "";
-    for(unsigned int i = 0; i < line.length(); i++){
-            if(line[i] == ' '){
-                break;
-            }
-        id += line[i];
-    }
-    if(id_input_string == id){
-        return true;
-    }
-    return false;
-}
-
+/*Admin_domain Find_line::get_admin_domain(){
+    Admin_domain admindomain;
+    return admindomain;
+}*/
 /*Returns a line from a file after an id*/
-string Find_line::retrieveItem(string filename, int id){
+string Find_line::retrieveItem(string filename, string id){
     ifstream fin;
     string line;
+    Admin_domain admindomain;
     fin.open(filename);
 
     while(!fin.eof()){
             getline(fin,line);
-            if(this->find_ID(line,id)){
+            if(admindomain.find_ID(line) == id){
             break;
           }
           line = "";
@@ -48,11 +35,16 @@ string Find_line::retrieveItem(string filename, int id){
     return line;
 }
 ///Returns each line in a vector
-/*string* Find_line::retrive_all_items(){
+vector<string> Find_line::retrive_all_items(string file){
     vector<string> toppings;
+    ifstream fin;
     string line = "";
+    fin.open(file);
+
     while(!fin.eof()){
             getline(fin,line);
-    }
+            toppings.push_back(line);
+          }
+    fin.close();
     return toppings;
-}*/
+}
