@@ -25,6 +25,6 @@ istream& operator >> (istream& in, Pizza_size& pizza_size){
 }
 
 ostream& operator << (ostream& out,const Pizza_size& pizza_size){
-    out << pizza_size.ID <<" "<< pizza_size.name << " " << pizza_size.price << endl;
+    out << pizza_size.ID <<", "<< pizza_size.name << ", " << pizza_size.price << endl;
     return out;
 }

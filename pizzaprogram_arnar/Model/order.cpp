@@ -4,14 +4,6 @@ order::order(){
 	//constructor
 };
 
-order::order(string id, string n, string stat ,double pr){
-	ID = id;
-	name = n;
-	status = stat;
-	price = pr;
-
-};
-
 string order::getID(){
 	return ID;
 };
@@ -34,6 +26,8 @@ istream& operator >> (istream& in, order& order){
 	in>>order.ID;
 	cout<<"Name: ";
 	in>>order.name;
+	cout<<"Delivery method: ";
+	in>>order.delivery;
 	cout<<"Status: ";
 	in>>order.status;
 	cout<<"Price: ";
@@ -42,6 +36,13 @@ istream& operator >> (istream& in, order& order){
 };
 
 ostream& operator << (ostream& out, order& order){
-	out<<order.ID<<" "<<order.name<<" "<<order.status<<" "<<order.price<<endl;
+	out<<order.ID<<", "<<order.name<<", "<<order.delivery<<", "<<order.status<<", "<<order.price<<endl;
 	return out;
 };
+
+int main(){
+	order ord;
+	cin>>ord;
+	cout<<ord;
+	return 0;
+}

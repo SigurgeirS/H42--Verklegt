@@ -10,14 +10,15 @@ class order{
 	private:
 		string ID;
 		string name;
+		string delivery;
 		string status;
 		double price;
 		
 	public:
 		order();
-		order(string id, string n, string stat, double price);
 		string getID();
 		string getName();
+		string getDelivery();
 		string getStatus();
 		double getPrice();
 		

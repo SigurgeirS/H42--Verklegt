@@ -17,7 +17,7 @@ double Soda::getPrice(){
 }
 
 ostream& operator << (ostream& out, const Soda& soda){
-	out<<soda.ID<<" "<<soda.name<<" "<<soda.price<<endl;
+	out<<soda.ID<<", "<<soda.name<<", "<<soda.price<<endl;
 	return out;
 }
 

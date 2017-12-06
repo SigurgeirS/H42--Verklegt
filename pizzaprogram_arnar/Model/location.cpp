@@ -20,6 +20,6 @@ istream & operator >> (istream& in, location& loc){
 };
 
 ostream& operator << (ostream& out, location& loc){
-	out<<loc.ID<<" "<<loc.name<<" "<<loc.address<<endl;
+	out<<loc.ID<<", "<<loc.name<<", "<<loc.address<<endl;
 	return out;
 };

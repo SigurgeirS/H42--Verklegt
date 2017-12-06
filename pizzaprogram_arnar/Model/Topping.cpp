@@ -23,7 +23,7 @@ istream& operator >> (istream& in, Topping& topping)
 
 ostream& operator << (ostream& out,const Topping topping)
 {
-    out << topping.ID << " " << topping.name << " " << topping.price << endl;
+    out << topping.ID << ", " << topping.name << ", " << topping.price << endl;
     return out;
 }
 Topping::~Topping()

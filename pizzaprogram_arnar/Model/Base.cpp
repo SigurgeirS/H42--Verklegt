@@ -16,7 +16,7 @@ string Base::get_id(){
 }
 
 ostream& operator << (ostream& out, Base base){
-    out << base.ID << " " << base.base_name << " " << base.price << endl;
+    out << base.ID << ", " << base.base_name << ", " << base.price << endl;
     return out;
 }
 

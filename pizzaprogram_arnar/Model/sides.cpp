@@ -17,7 +17,7 @@ double Sides::getPrice(){
 }
 
 ostream& operator << (ostream& out, const Sides& side){
-	out<<side.ID<<" "<<side.name<<" "<<side.price<<endl;
+	out<<side.ID<<", "<<side.name<<", "<<side.price<<endl;
 
 	return out;
 }

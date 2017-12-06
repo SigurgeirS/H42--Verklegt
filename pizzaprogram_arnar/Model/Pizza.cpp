@@ -10,7 +10,7 @@ string Pizza::getID(){
 
 ostream& operator << (ostream& out, const Pizza& pizza)
 {
-	out<<pizza.ID<<" "<<pizza.price<<endl;
+	out<<pizza.ID<<", "<<pizza.price<<endl;
 
         return out;
 }
