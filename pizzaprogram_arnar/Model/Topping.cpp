@@ -1,33 +1,40 @@
 #include "Topping.h"
-
+#include<string.h>
+/*
+This class holds our Topping (in this case we just expect that we only choice one topping of any kind
+*/
 Topping::Topping()
 {
-  //constructor
+    ID = 0;
 }
 
-string Topping::get_id()
+void auto_increment_id()
+{
+
+}
+
+int Topping::get_id()
 {
     return ID;
 }
 
 istream& operator >> (istream& in, Topping& topping)
 {
-    cout << "Type in a topping ID: " << endl;
+    cout << "Type in an topping ID: " << endl;
     in >> topping.ID;
-    cout << "Type in a topping name: " << endl;
+    cout << "Type in an topping name: " << endl;
     in >> topping.name;
-    cout << "Type in a topping price: " << endl;
+    cout << "Type in an topping price: " << endl;
     in >> topping.price;
     return in;
 }
 
 ostream& operator << (ostream& out,const Topping topping)
 {
-    out << topping.ID << " " << topping.name << " " << topping.price << endl;
+    out << topping.ID << "," << topping.name << "," << topping.price << endl;
     return out;
 }
 Topping::~Topping()
 {
     //dtor
 }
-

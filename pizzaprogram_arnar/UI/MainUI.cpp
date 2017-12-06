@@ -1,6 +1,4 @@
 #include "MainUI.h"
-#include<iostream>
-#include "pizzaUI.h"
 
 using namespace std;
 MainUI::MainUI()
@@ -22,34 +20,38 @@ void MainUI::startUI()
         cin >> selection;
         switch(selection)
         {
-      case 'a': {
+        case 'a':
+        {
             PizzaUI pizzaui;
             pizzaui.startUI();
             cout << endl;
         }
         break;
 
-      case 's': {
-        /*SalesUI salesui;
-        salesui.startUI();*/
-        cout << endl;
+        case 's':
+        {
+            /*SalesUI salesui;
+            salesui.startUI();*/
+            cout << endl;
         }
         break;
-      case 'b': {
-        /*BakingUI bakingui;
-        bakingui.startUI();*/
-        cout << endl;
+        case 'b':
+        {
+            /*BakingUI bakingui;
+            bakingui.startUI();*/
+            cout << endl;
         }
         break;
-      case 'd': {
-        /*DeliveryUI deliveryui;
-        deliveryui.startUI();*/
-        cout << endl;
+        case 'd':
+        {
+            /*DeliveryUI deliveryui;
+            deliveryui.startUI();*/
+            cout << endl;
         }
         break;
 
+        }
     }
-}
 }
 
 MainUI::~MainUI()

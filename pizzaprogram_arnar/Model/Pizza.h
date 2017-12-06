@@ -5,15 +5,23 @@
 using namespace std;
 class Pizza
 {
-	private:
-		string ID;
-		double price;
-	public:
-		Pizza();
-		string getID();
-    		friend ostream& operator << (ostream& out, const Pizza& pizza);
-    		friend istream& operator >>(istream& in, Pizza& pizza);
-    
+public:
+    Pizza();
+    Pizza(int numberOfTopings);
+
+    friend ostream& operator << (ostream& out, const Pizza& pizza);
+    virtual ~Pizza();
+    void initalize(int numberOfTopings);
+    void clean();
+    void addTopping(Topping topping);
+    bool find_line(string line,int id_input);
+    friend istream& operator >>(istream& in, Pizza& pizza);
+protected:
+
+private:
+    Topping *toppings;
+    int toppingcount;
+    int currenttopping_Num;
 };
 
 #endif // PIZZA_H
