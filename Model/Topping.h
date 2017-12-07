@@ -9,14 +9,16 @@ public:
     Topping();
     friend ostream& operator << (ostream& out, const Topping topping);
     friend istream& operator >>(istream& in, Topping& topping);
-    int get_id();
+    string get_id();
+    string get_name();
+    double get_price();
     virtual ~Topping();
 
 private:
-    char name[32];
+    string name;
     double price;
-    int ID;
-    string toppingline;
+    string ID;
+
 };
 
 #endif // TOPPING_H

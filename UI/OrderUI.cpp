@@ -10,6 +10,7 @@ OrderUI::~OrderUI()
     //dtor
 }
 
-void OrderUI::startUI(){
+void OrderUI::startUI()
+{
 
 }

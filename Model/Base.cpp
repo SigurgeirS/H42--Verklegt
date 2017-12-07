@@ -1,9 +1,11 @@
-#include <iostream>
 #include "Base.h"
 
 using namespace std;
 Base::Base()
 {
+    this->ID = "";
+    this->base_name = "";
+    this->price = 0;
 }
 
 Base::~Base()
@@ -11,16 +13,26 @@ Base::~Base()
     //dtor
 }
 
-int Base::get_id(){
+string Base::get_id()
+{
     return ID;
 }
 
-ostream& operator << (ostream& out, Base base){
-    out << base.ID << " " << base.base_name << " " << base.price << endl;
+string Base::get_name(){
+       return base_name;
+}
+
+double Base::get_price(){
+       return price;
+}
+ostream& operator << (ostream& out, Base base)
+{
+    out << base.ID << "," << base.base_name << "," << base.price << endl;
     return out;
 }
 
-istream& operator >>(istream& in, Base& base){
+istream& operator >>(istream& in, Base& base)
+{
     cout << "Type in an ID: " << endl;
     in >> base.ID;
     cout << "Type in a price: " << endl;

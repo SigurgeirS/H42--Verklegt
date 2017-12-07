@@ -1,15 +1,8 @@
-20 rub 571
-1 hakk 2
-2 sveppir 1
-3 ananas 1
-66 boll 5
-555 nana 5
-666 ulalala 1
-44 nnnnj 55
-423423 bolv 5
-0 bolv 5
-444 ff 4
-555 ddd 4
-123 ccc 1
-1 ff 5
-7 f 6
+1 papperoni 2
+2 sveppir 2
+1,f,3
+1,f,0
+1,f,0
+1,n,4
+5,vivi,0
+6,4,4

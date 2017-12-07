@@ -4,14 +4,14 @@
 
 class OrderUI
 {
-    public:
-        OrderUI();
-        void startUI();
-        virtual ~OrderUI();
+public:
+    OrderUI();
+    void startUI();
+    virtual ~OrderUI();
 
-    protected:
+protected:
 
-    private:
+private:
 };
 
 #endif // ORDERUI_H

@@ -5,7 +5,9 @@ This class holds our Topping (in this case we just expect that we only choice on
 */
 Topping::Topping()
 {
-  ID = 0;
+    this->ID = "";
+    this->name = "";
+    this->price = 0;
 }
 
 void auto_increment_id()
@@ -13,9 +15,17 @@ void auto_increment_id()
 
 }
 
-int Topping::get_id()
+string Topping::get_id()
 {
     return ID;
+}
+
+string Topping::get_name(){
+       return name;
+}
+
+double Topping::get_price(){
+       return price;
 }
 
 istream& operator >> (istream& in, Topping& topping)
@@ -31,7 +41,7 @@ istream& operator >> (istream& in, Topping& topping)
 
 ostream& operator << (ostream& out,const Topping topping)
 {
-    out << topping.ID << " " << topping.name << " " << topping.price << endl;
+    out << topping.ID << "," << topping.name << "," << topping.price << endl;
     return out;
 }
 Topping::~Topping()
