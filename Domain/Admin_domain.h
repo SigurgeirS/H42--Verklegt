@@ -7,8 +7,6 @@
 #include "../Model/Location.h"
 #include "../Repo/LocationRepository.h"
 #include "../Model/Otherproducts.h"
-
-
 ///Include for toppings
 #include "../Exceptions/invalid_topping/InvalidToppingCount.h"
 #include "../Exceptions/invalid_topping/InvalidToppingName.h"
@@ -16,13 +14,17 @@
 ///Include for base
 #include "../Exceptions/Invalid_base/InvalidBaseName.h"
 #include "../Exceptions/Invalid_base/InvalidBasePrice.h"
+#include "../Exceptions/Invalid_base/InvalidBaseCount.h"
 ///Include for size
 #include "../Exceptions/invalid_size/InvalidSize.h"
 #include "../Exceptions/invalid_size/Invalidsizeprice.h"
+#include "../Exceptions/invalid_size/InvalidSizeCount.h"
 ///Include for location
 #include "../Exceptions/Invalid_location/InvalidLocationName.h"
+#include "../Exceptions/Invalid_location/InvalidLocationCount.h"
 ///Include for menu
 #include "../Exceptions/Invalid_menu/InvalidPizzaMenuName.h"
+#include "../Exceptions/Invalid_menu/InvalidMenuCount.h"
 ///Other includes
 #include<iostream>
 #include<vector>
@@ -31,6 +33,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <ctype.h>
+#include <iomanip>
 
 
 class Admin_domain
@@ -52,13 +55,17 @@ public:
     ///Checking base
     void check_base_name(Base& base);
     void check_base_price(Base& base);
+    void check_base_count(int counter);
     ///Checking size
-    void check_pizza_size_price(Pizza_size& pizzasize);
     void check_pizza_size(Pizza_size& pizzasize);
+    void check_pizza_size_price(Pizza_size& pizzasize);
+    void check_size_count(int counter);
     ///Checking location
     void check_location_name(Location& location);
+    void check_location_count(int counter);
     ///Checking menu
     void check_menu_name(Pizza_menu& pizzamenu);
+    void check_menu_count(int counter);
     ///Other things
     string find_ID(string line);
     string retrieveItem(string filename, string id);

@@ -91,6 +91,7 @@ void PizzaUI::record_base()
     int baseCnt = 0;
     cout << "How many bases: " << endl;
     cin >> baseCnt;
+    Admin_domain().check_base_count(baseCnt);
 
     for(int i = 0; i < baseCnt; i++)
     {
@@ -115,6 +116,7 @@ void PizzaUI::record_sizes()
     int sizeCnt = 0;
     cout << "How many sizes: " << endl;
     cin >> sizeCnt;
+    get_admin_domain().check_size_count(sizeCnt);
     string* sizes = new string[sizeCnt];
 
     for(int i = 0; i < sizeCnt; i++)
@@ -137,19 +139,21 @@ void PizzaUI::record_sizes()
 
 void PizzaUI::record_menu()
 {
+    try{
     int pizzaCnt = 0;
     int toppingsCnt = 0;
     cout << "How many pizzas on the menu: " << endl;
     cin >> pizzaCnt;
-
+    get_admin_domain().check_menu_count(pizzaCnt);
     for(int i = 0; i < pizzaCnt; i++)
     {
         ToppingsUI toppingsui;
         Pizza_menu pizzamenu;
         cin >> pizzamenu;
+        get_admin_domain().check_menu_name(pizzamenu);
         cout << "How many toppings? " << endl;
         cin >> toppingsCnt;
-
+        get_admin_domain().check_topping_count(toppingsCnt);
         for(int j = 0; j < toppingsCnt; j++)
         {
             cout << "Pick a topping: " << endl;
@@ -157,21 +161,38 @@ void PizzaUI::record_menu()
             string line = toppingsui.get_toppingline();
             get_admin_domain().record_menu(pizzamenu,line);
         }
-
+    }
+    }
+    catch(InvalidMenuCount){
+          cout << "Invalid menu number!" << endl;
+    }
+    catch(InvalidPizzaMenuName){
+          cout << "Invalid menu name!" << endl;
+    }
+    catch(InvalidToppingCount){
+          cout << "Invalid topping count!" << endl;
     }
 }
 
 void PizzaUI::record_locations()
 {
+    try{
     Location location;
     int locationsCnt  = 0;
     cout << "How many locations? " << endl;
     cin >> locationsCnt;
-
+    get_admin_domain().check_location_count(locationsCnt);
     for(int i = 0; i < locationsCnt; i++)
     {
         cin >> location;
         get_admin_domain().record_location(location);
+    }
+    }
+    catch(InvalidLocationCount){
+          cout << "Invalid location number!" << endl;
+    }
+    catch(InvalidLocationName){
+        cout << "Invalid location name!" << endl;
     }
 }
 

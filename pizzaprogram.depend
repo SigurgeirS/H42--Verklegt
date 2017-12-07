@@ -114,7 +114,7 @@
 	"../Model/Topping.h"
 	"../Repo/Find_line.h"
 
-1512651684 source:c:\users\arnar\desktop\hello\pizzaprogram_arnar\ui\pizzaui.cpp
+1512667804 source:c:\users\arnar\desktop\hello\pizzaprogram_arnar\ui\pizzaui.cpp
 	"PizzaUI.h"
 
 1512603570 source:c:\users\arnar\desktop\hello\pizzaprogram_arnar\model\base.cpp
@@ -138,7 +138,7 @@
 	<iostream>
 	<fstream>
 
-1512583433 source:c:\users\arnar\desktop\hello\pizzaprogram_arnar\repo\find_line.cpp
+1512657427 source:c:\users\arnar\desktop\hello\pizzaprogram_arnar\repo\find_line.cpp
 	"Find_line.h"
 
 1512495710 c:\users\arnar\desktop\hello\pizzaprogram_arnar\repo\find_line.h
@@ -170,11 +170,11 @@
 1512649006 c:\users\arnar\desktop\hello\pizzaprogram_arnar\model\pizza_menu.h
 	<iostream>
 
-1512649750 source:c:\users\arnar\desktop\hello\pizzaprogram_arnar\domain\admin_domain.cpp
+1512666482 source:c:\users\arnar\desktop\hello\pizzaprogram_arnar\domain\admin_domain.cpp
 	"../Domain/Admin_domain.h"
 	"../UI/PizzaUI.h"
 
-1512652532 c:\users\arnar\desktop\hello\pizzaprogram_arnar\domain\admin_domain.h
+1512666823 c:\users\arnar\desktop\hello\pizzaprogram_arnar\domain\admin_domain.h
 	"../Repo/PizzaRepository.h"
 	"../Repo/Pizza_menuRepository.h"
 	"../Repo/OtherproductsRepository.h"
@@ -187,10 +187,14 @@
 	"../Exceptions/invalid_topping/InvalidToppingPrice.h"
 	"../Exceptions/Invalid_base/InvalidBaseName.h"
 	"../Exceptions/Invalid_base/InvalidBasePrice.h"
+	"../Exceptions/Invalid_base/InvalidBaseCount.h"
 	"../Exceptions/invalid_size/InvalidSize.h"
 	"../Exceptions/invalid_size/Invalidsizeprice.h"
+	"../Exceptions/invalid_size/InvalidSizeCount.h"
 	"../Exceptions/Invalid_location/InvalidLocationName.h"
+	"../Exceptions/Invalid_location/InvalidLocationCount.h"
 	"../Exceptions/Invalid_menu/InvalidPizzaMenuName.h"
+	"../Exceptions/Invalid_menu/InvalidMenuCount.h"
 	<iostream>
 	<vector>
 	<sstream>
@@ -198,6 +202,7 @@
 	<stdio.h>
 	<stdlib.h>
 	<ctype.h>
+	<iomanip>
 
 1512515656 source:c:\users\arnar\desktop\hello\pizzaprogram_arnar\repo\pizza_menurepository.cpp
 	"Pizza_menuRepository.h"
@@ -303,4 +308,24 @@
 
 1512649400 source:c:\users\arnar\desktop\hello\pizzaprogram_arnar\exceptions\invalid_menu\invalidpizzamenuname.cpp
 	"InvalidPizzaMenuName.h"
+
+1512664569 c:\users\arnar\desktop\hello\pizzaprogram_arnar\exceptions\invalid_size\invalidsizecount.h
+
+1512664661 c:\users\arnar\desktop\hello\pizzaprogram_arnar\exceptions\invalid_location\invalidlocationcount.h
+
+1512664662 source:c:\users\arnar\desktop\hello\pizzaprogram_arnar\exceptions\invalid_location\invalidlocationcount.cpp
+	"InvalidLocationCount.h"
+
+1512664569 source:c:\users\arnar\desktop\hello\pizzaprogram_arnar\exceptions\invalid_size\invalidsizecount.cpp
+	"InvalidSizeCount.h"
+
+1512665816 c:\users\arnar\desktop\hello\pizzaprogram_arnar\exceptions\invalid_base\invalidbasecount.h
+
+1512665816 source:c:\users\arnar\desktop\hello\pizzaprogram_arnar\exceptions\invalid_base\invalidbasecount.cpp
+	"InvalidBaseCount.h"
+
+1512666172 c:\users\arnar\desktop\hello\pizzaprogram_arnar\exceptions\invalid_menu\invalidmenucount.h
+
+1512666172 source:c:\users\arnar\desktop\hello\pizzaprogram_arnar\exceptions\invalid_menu\invalidmenucount.cpp
+	"InvalidMenuCount.h"
 

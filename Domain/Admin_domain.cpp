@@ -8,7 +8,6 @@ Admin_domain::Admin_domain()
 
 ///Topping check
 void Admin_domain::check_topping_count(int counter) throw (InvalidToppingCount){
-     PizzaUI pizzaui;
      if(cin.fail()){
         clear_input_stream();
         throw InvalidToppingCount();
@@ -36,13 +35,20 @@ void Admin_domain::check_topping_Name(Topping& topping){
 }
 
 void Admin_domain::check_topping_Price(Topping& topping){
-
-     if(!isdigit(topping.get_price())){
+     if(cin.fail()){
         clear_input_stream();
         throw InvalidToppingPrice();
      }
 }
+
 ///Base check
+void Admin_domain::check_base_count(int counter){
+     if(cin.fail()){
+        clear_input_stream();
+        throw InvalidBaseCount();
+     }
+}
+
 void Admin_domain::check_base_name(Base& base){
     for(unsigned int i = 0; i < base.get_name().length(); i++){
      if(isdigit(base.get_name()[i])){
@@ -52,29 +58,42 @@ void Admin_domain::check_base_name(Base& base){
 }
 
 void Admin_domain::check_base_price(Base& base){
-
-    if(!isdigit(base.get_price())){
+     if(cin.fail()){
         clear_input_stream();
         throw InvalidBasePrice();
      }
 }
 
 ///Size check
-void Admin_domain::check_pizza_size_price(Pizza_size& pizzasize){
-     if(!isdigit(pizzasize.get_price())){
+void Admin_domain::check_size_count(int counter){
+     if(cin.fail()){
         clear_input_stream();
-        throw Invalidsizeprice();
+        throw InvalidSizeCount();
+     }
+}
+
+void Admin_domain::check_pizza_size_price(Pizza_size& pizzasize){
+      if(cin.fail()){
+        clear_input_stream();
+        throw InvalidBasePrice();
      }
 }
 
 void Admin_domain::check_pizza_size(Pizza_size& pizzasize){
-     if(!isdigit(pizzasize.get_price())){
+
+     if(!isdigit(pizzasize.get_size())){
         clear_input_stream();
         throw InvalidSize();
      }
 }
 
 ///Location check
+void Admin_domain::check_location_count(int counter){
+     if(cin.fail()){
+        clear_input_stream();
+        throw InvalidLocationCount();
+     }
+}
 void Admin_domain::check_location_name(Location& location){
 
     for(unsigned int i = 0; i < location.get_name().length(); i++){
@@ -85,6 +104,13 @@ void Admin_domain::check_location_name(Location& location){
 }
 }
 ///MenuCheck
+void Admin_domain::check_menu_count(int counter){
+     if(cin.fail()){
+        clear_input_stream();
+        throw InvalidMenuCount();
+     }
+}
+
 void Admin_domain::check_menu_name(Pizza_menu& pizzamenu){
          for(unsigned int i = 0; i < pizzamenu.get_name().length(); i++){
           if(isdigit(pizzamenu.get_name()[i])){
@@ -108,8 +134,8 @@ string Admin_domain::find_ID(string line)
 void Admin_domain::record_toppings(Topping& topping)
 {
     PizzaRepository pizzarepo;
-    this->check_topping_Name(topping);
     this->check_topping_Price(topping);
+    this->check_topping_Name(topping);
     pizzarepo.storeToppings(topping);
 }
 
@@ -132,8 +158,8 @@ void Admin_domain::record_menu(Pizza_menu& pizzamenu,string line)
 void Admin_domain::record_size(Pizza_size& pizza_size)
 {
     PizzaRepository pizzarepo;
-    this->check_pizza_size_price(pizza_size);
     this->check_pizza_size(pizza_size);
+    this->check_pizza_size_price(pizza_size);
     pizzarepo.storeSize(pizza_size);
 }
 
