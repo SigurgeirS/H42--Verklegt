@@ -30,6 +30,7 @@ public:
 		return in;
 	};
 	friend ostream& operator << (ostream& out, const superhero& sup){
+
 		if(sup.verbose){
 		out<<"Name: ";
 		};
@@ -65,7 +66,32 @@ void superhero::setVerbose(bool b){
 };
 
 int main(){
-	//create a vector with size 0 of class superhero;
+    superhero Superhero;
+    cin >> Superhero;
+    ofstream fout;
+    fout.open("binarySuperhero.dat",ios::binary);
+    fout << Superhero;
+    fout.close();
+   ifstream fin;
+    superhero Superhero2;
+    fin.open("binarySuperhero.dat",ios::binary);
+     if(fin.is_open()){
+        fin.seekg(0,fin.end);
+        int recordCount = fin.tellg() / sizeof(superhero);
+        fin.seekg(0, fin.beg);
+        for(int i = 0; i < recordCount; i++){
+            fin.read((char*)(&Superhero2), sizeof(superhero));
+            cout << Superhero2 << endl;
+        }
+     }
+     else{
+        cout << "Can't read file!" << endl;
+     }
+     fin.close();
+
+
+    //fin.close();
+	/*//create a vector with size 0 of class superhero;
 	vector<superhero> supers;
 	char cont;
 	//Ask the user if he wants to record a superhero.
@@ -83,14 +109,14 @@ int main(){
 		cout<<endl;
 		c++;
 	};
-	
+
 	ofstream fout;
-	
+
 	fout.open("binarySuperhero.dat", ios::binary | ios::app);
 	fout.seekp (0, fout.end);
-	fout.write((char*)(&supers), sizeof(superhero) * c);
+	fout.write((char*)(&supers), sizeof(superhero));
 	fout.close();
-		
+
 	ifstream fin;
 	vector<superhero> supers2;
 	//SEGMENTATION FAULT!!!!! vantar sennilega '\0'
@@ -101,17 +127,16 @@ int main(){
 		fin.seekg(0, fin.beg);
 		fin.read((char*) (&supers2), length);
 		fin.close();
-		
 		int i = 0;
 		while(i<c){
-		cout<<supers2[i];
+		cout<<supers2[0];
 		cout<<endl;
 		i++;
 	};
 	}else{
 		cout<<"Could not open file"<<endl;
-	};
-	
+	};*/
+
 
 	return 0;
 }
