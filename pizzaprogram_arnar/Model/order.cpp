@@ -20,18 +20,18 @@ double order::getPrice(){
 	return price;
 };
 
+void order::setID(string ID){
+	this -> ID = ID;
+};
+
 
 istream& operator >> (istream& in, order& order){
-	cout<<"ID: ";
-	in>>order.ID;
 	cout<<"Name: ";
 	in>>order.name;
 	cout<<"Delivery method: ";
 	in>>order.delivery;
 	cout<<"Status: ";
 	in>>order.status;
-	cout<<"Price: ";
-	in>>order.price;
 	return in;
 };
 

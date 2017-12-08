@@ -21,6 +21,7 @@ class order{
 		string getDelivery();
 		string getStatus();
 		double getPrice();
+		void setID(string ID);
 		
 		friend istream& operator >> (istream& in, order& order);
 		friend ostream& operator << (ostream& out, const order& order);
