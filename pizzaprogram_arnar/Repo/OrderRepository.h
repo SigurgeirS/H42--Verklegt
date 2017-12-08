@@ -1,19 +1,12 @@
 #ifndef ORDERREPOSITORY_H
 #define ORDERREPOSITORY_H
-#include "../Model/Pizza.h"
-#include<iostream>
+#include"../Model/order.h"
 #include<fstream>
 class OrderRepository
 {
 public:
-    OrderRepository();
-    void retrieveOrder();
-    string retrieveItem(string filename, int id);
-    void storePizza(const Pizza& pizza);
-    virtual ~OrderRepository();
-
-protected:
-
+	OrderRepository();
+	void add(const order& newOrder);
 private:
 };
 
