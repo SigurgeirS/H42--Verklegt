@@ -1,3 +1,21 @@
+<<<<<<< HEAD
+#ifndef PIZZAREPOSITORY_H
+#define PIZZAREPOSITORY_H
+#include "../Model/pizza.h"
+
+class PizzaRepository
+{
+public:
+    PizzaRepository();
+    void storePizza(const Pizza& pizza);
+    Pizza retrievePizza();
+    virtual ~PizzaRepository();
+
+private:
+};
+
+#endif // PIZZAREPOSITORY_H
+=======
 #ifndef PIZZAREPOSITORY_H
 #define PIZZAREPOSITORY_H
 #include "../Model/Base.h"
@@ -21,3 +39,4 @@ private:
 };
 
 #endif // PIZZAREPOSITORY_H
+>>>>>>> a8bf7059d9df22810c8fa6bd54be9ab501350072

@@ -32,6 +32,18 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+<<<<<<< HEAD
+		<Unit filename="MainUI.cpp" />
+		<Unit filename="MainUI.h" />
+		<Unit filename="Pizza.cpp" />
+		<Unit filename="Pizza.h" />
+		<Unit filename="PizzaRepository.cpp" />
+		<Unit filename="PizzaRepository.h" />
+		<Unit filename="PizzaUI.cpp" />
+		<Unit filename="PizzaUI.h" />
+		<Unit filename="Topping.cpp" />
+		<Unit filename="Topping.h" />
+=======
 		<Unit filename="Domain/Admin_domain.cpp" />
 		<Unit filename="Domain/Admin_domain.h" />
 		<Unit filename="Model/Base.cpp" />
@@ -67,6 +79,7 @@
 		<Unit filename="UI/PizzaUI.h" />
 		<Unit filename="UI/ToppingsUI.cpp" />
 		<Unit filename="UI/ToppingsUI.h" />
+>>>>>>> a8bf7059d9df22810c8fa6bd54be9ab501350072
 		<Unit filename="main.cpp" />
 		<Extensions>
 			<code_completion />

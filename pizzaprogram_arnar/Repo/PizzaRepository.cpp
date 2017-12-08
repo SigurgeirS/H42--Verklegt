@@ -1,3 +1,42 @@
+<<<<<<< HEAD
+/*
+This file reads and writes the pizza to a text file.
+*/
+#include "PizzaRepository.h"
+#include<fstream>
+#include "../Model/Pizza.h"
+
+PizzaRepository::PizzaRepository()
+{
+    //ctor
+}
+
+PizzaRepository::~PizzaRepository()
+{
+    //dtor
+}
+
+void PizzaRepository::storePizza(const Pizza& pizza)
+{
+    ofstream fout;
+    fout.open("pizzas.txt",ios::app);
+
+    fout << pizza << endl;
+
+    fout.close();
+}
+Pizza PizzaRepository::retrievePizza()
+{
+
+    ifstream fin;
+    fin.open("pizzas.txt");
+    Pizza pizza;
+    fin >> pizza;
+
+    fin.close();
+    return pizza;
+}
+=======
 ///This class records toppings,base and size to a file so we can make some pizza!
 #include "PizzaRepository.h"
 #include "../Repo/PizzaRepository.h"
@@ -47,3 +86,4 @@ void PizzaRepository::storeSize(const Pizza_size& pizza_size)
 {
 //get_find_line().retrieveItem("pizza_topping.txt",ID);
 }*/
+>>>>>>> a8bf7059d9df22810c8fa6bd54be9ab501350072

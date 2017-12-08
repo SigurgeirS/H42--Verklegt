@@ -1,3 +1,113 @@
+<<<<<<< HEAD
+# depslib dependency file v1.0
+1512004483 source:c:\users\arnar\desktop\hello\pizzaprogram\main.cpp
+	<iostream>
+	"mainui.h"
+
+1512004283 c:\users\arnar\desktop\hello\pizzaprogram\mainui.h
+
+1512056757 source:c:\users\arnar\desktop\hello\pizzaprogram\mainui.cpp
+	"MainUI.h"
+	<iostream>
+	"pizzaUI.h"
+
+1512061271 source:c:\users\arnar\desktop\hello\pizzaprogram\pizza.cpp
+	"Pizza.h"
+	<stddef.h>
+
+1512054601 c:\users\arnar\desktop\hello\pizzaprogram\pizza.h
+	"topping.h"
+	<iostream>
+
+1512062598 source:c:\users\arnar\desktop\hello\pizzaprogram\topping.cpp
+	"Topping.h"
+	<string.h>
+
+1512050659 c:\users\arnar\desktop\hello\pizzaprogram\topping.h
+	<iostream>
+
+1512050235 c:\users\arnar\desktop\hello\pizzaprogram\pizzaui.h
+
+1512062225 source:c:\users\arnar\desktop\hello\pizzaprogram\pizzaui.cpp
+	"PizzaUI.h"
+	<iostream>
+	"Pizza.h"
+	"PizzaRepository.h"
+
+1512061258 source:c:\users\arnar\desktop\hello\pizzaprogram\pizzarepository.cpp
+	"PizzaRepository.h"
+	<fstream>
+	"Pizza.h"
+
+1512060392 c:\users\arnar\desktop\hello\pizzaprogram\pizzarepository.h
+	"pizza.h"
+
+1512078472 source:c:\users\arnar\desktop\hello\pizzaprogram_arnar\main.cpp
+	<iostream>
+	".\UI\MainUI.h"
+
+1512061271 source:c:\users\arnar\desktop\hello\pizzaprogram_arnar\pizza.cpp
+	"Pizza.h"
+	<stddef.h>
+
+1512054601 c:\users\arnar\desktop\hello\pizzaprogram_arnar\pizza.h
+	"topping.h"
+	<iostream>
+
+1512050659 c:\users\arnar\desktop\hello\pizzaprogram_arnar\topping.h
+	<iostream>
+
+1512061258 source:c:\users\arnar\desktop\hello\pizzaprogram_arnar\pizzarepository.cpp
+	"PizzaRepository.h"
+	<fstream>
+	"Pizza.h"
+
+1512060392 c:\users\arnar\desktop\hello\pizzaprogram_arnar\pizzarepository.h
+	"pizza.h"
+
+1512062598 source:c:\users\arnar\desktop\hello\pizzaprogram_arnar\topping.cpp
+	"Topping.h"
+	<string.h>
+
+1512084099 source:c:\users\arnar\desktop\hello\pizzaprogram_arnar\ui\mainui.cpp
+	"MainUI.h"
+	<iostream>
+	"pizzaUI.h"
+
+1512080992 c:\users\arnar\desktop\hello\pizzaprogram_arnar\ui\mainui.h
+
+1512082198 c:\users\arnar\desktop\hello\pizzaprogram_arnar\ui\pizzaui.h
+
+1512080230 source:c:\users\arnar\desktop\hello\pizzaprogram_arnar\model\pizza.cpp
+	"Pizza.h"
+	<stddef.h>
+
+1512080259 c:\users\arnar\desktop\hello\pizzaprogram_arnar\model\pizza.h
+	"topping.h"
+	<iostream>
+
+1512080269 c:\users\arnar\desktop\hello\pizzaprogram_arnar\model\topping.h
+	<iostream>
+
+1512083375 source:c:\users\arnar\desktop\hello\pizzaprogram_arnar\model\topping.cpp
+	"Topping.h"
+	<string.h>
+
+1512084266 source:c:\users\arnar\desktop\hello\pizzaprogram_arnar\repo\pizzarepository.cpp
+	"PizzaRepository.h"
+	<fstream>
+	"../Model/Pizza.h"
+
+1512080289 c:\users\arnar\desktop\hello\pizzaprogram_arnar\repo\pizzarepository.h
+	"../Model/pizza.h"
+
+1512084104 source:c:\users\arnar\desktop\hello\pizzaprogram_arnar\ui\pizzaui.cpp
+	"PizzaUI.h"
+	<iostream>
+	"../Model/Pizza.h"
+	"../Repo/PizzaRepository.h"
+
+=======
 # depslib dependency file v1.0
 1512004483 source:c:\users\arnar\desktop\hello\pizzaprogram\main.cpp
 	<iostream>
@@ -220,3 +330,4 @@
 1512492995 c:\users\arnar\desktop\hello\pizzaprogram_arnar\repo\otherproductsrepository.h
 	"../Model/Otherproducts.h"
 
+>>>>>>> a8bf7059d9df22810c8fa6bd54be9ab501350072

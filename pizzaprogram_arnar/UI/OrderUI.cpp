@@ -37,4 +37,3 @@ order OrderUI::createOrder(){
 	cin>>newOrder;
 	return newOrder;
 }
-

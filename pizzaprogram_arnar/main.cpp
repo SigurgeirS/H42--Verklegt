@@ -1,12 +1,10 @@
 #include <iostream>
-#include ".\UI\OrderUI.h"
+#include ".\UI\MainUI.h"
 using namespace std;
 
 int main()
 {
-	OrderUI order;
-	order.startUI();
-
-	return 0;
+    MainUI mainui;
+    mainui.startUI();
+    return 0;
 }
-

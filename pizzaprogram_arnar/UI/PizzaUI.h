@@ -1,3 +1,20 @@
+<<<<<<< HEAD
+#ifndef PIZZAUI_H
+#define PIZZAUI_H
+
+
+class PizzaUI
+{
+public:
+    PizzaUI();
+    void startUI();
+    virtual ~PizzaUI();
+
+private:
+};
+
+#endif // PIZZAUI_H
+=======
 #ifndef PIZZAUI_H
 #define PIZZAUI_H
 #include "MainUI.h"
@@ -36,3 +53,4 @@ private:
 };
 
 #endif // PIZZAUI_H
+>>>>>>> a8bf7059d9df22810c8fa6bd54be9ab501350072
