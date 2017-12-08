@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #include "Pizza.h"
 #include <stddef.h>
 /*Holds information about our pizza*/
@@ -71,3 +72,31 @@ void Pizza::clean()
     toppings = NULL;
     currenttopping_Num = 0;
 }
+=======
+#include "Pizza.h"
+Pizza::Pizza()
+{
+	//constructor
+}
+
+string Pizza::getID(){
+	return ID;
+}
+
+ostream& operator << (ostream& out, const Pizza& pizza)
+{
+	out<<pizza.ID<<", "<<pizza.price<<endl;
+
+        return out;
+}
+
+istream& operator >>(istream& in, Pizza& pizza)
+{
+	cout<<"ID: ";
+	in>>pizza.ID;
+	cout<<"Price: ";
+	in>>pizza.price;
+
+	return in;
+}
+>>>>>>> a8bf7059d9df22810c8fa6bd54be9ab501350072

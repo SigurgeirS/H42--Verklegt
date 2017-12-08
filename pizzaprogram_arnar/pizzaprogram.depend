@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # depslib dependency file v1.0
 1512004483 source:c:\users\arnar\desktop\hello\pizzaprogram\main.cpp
 	<iostream>
@@ -106,3 +107,227 @@
 	"../Model/Pizza.h"
 	"../Repo/PizzaRepository.h"
 
+=======
+# depslib dependency file v1.0
+1512004483 source:c:\users\arnar\desktop\hello\pizzaprogram\main.cpp
+	<iostream>
+	"mainui.h"
+
+1512004283 c:\users\arnar\desktop\hello\pizzaprogram\mainui.h
+
+1512056757 source:c:\users\arnar\desktop\hello\pizzaprogram\mainui.cpp
+	"MainUI.h"
+	<iostream>
+	"pizzaUI.h"
+
+1512061271 source:c:\users\arnar\desktop\hello\pizzaprogram\pizza.cpp
+	"Pizza.h"
+	<stddef.h>
+
+1512054601 c:\users\arnar\desktop\hello\pizzaprogram\pizza.h
+	"topping.h"
+	<iostream>
+
+1512062598 source:c:\users\arnar\desktop\hello\pizzaprogram\topping.cpp
+	"Topping.h"
+	<string.h>
+
+1512050659 c:\users\arnar\desktop\hello\pizzaprogram\topping.h
+	<iostream>
+
+1512050235 c:\users\arnar\desktop\hello\pizzaprogram\pizzaui.h
+
+1512062225 source:c:\users\arnar\desktop\hello\pizzaprogram\pizzaui.cpp
+	"PizzaUI.h"
+	<iostream>
+	"Pizza.h"
+	"PizzaRepository.h"
+
+1512061258 source:c:\users\arnar\desktop\hello\pizzaprogram\pizzarepository.cpp
+	"PizzaRepository.h"
+	<fstream>
+	"Pizza.h"
+
+1512060392 c:\users\arnar\desktop\hello\pizzaprogram\pizzarepository.h
+	"pizza.h"
+
+1512482701 source:c:\users\arnar\desktop\hello\pizzaprogram_arnar\main.cpp
+	<iostream>
+	".\UI\MainUI.h"
+
+1512061271 source:c:\users\arnar\desktop\hello\pizzaprogram_arnar\pizza.cpp
+	"Pizza.h"
+	<stddef.h>
+
+1512054601 c:\users\arnar\desktop\hello\pizzaprogram_arnar\pizza.h
+	"topping.h"
+	<iostream>
+
+1512050659 c:\users\arnar\desktop\hello\pizzaprogram_arnar\topping.h
+	<iostream>
+
+1512061258 source:c:\users\arnar\desktop\hello\pizzaprogram_arnar\pizzarepository.cpp
+	"PizzaRepository.h"
+	<fstream>
+	"Pizza.h"
+
+1512060392 c:\users\arnar\desktop\hello\pizzaprogram_arnar\pizzarepository.h
+	"pizza.h"
+
+1512062598 source:c:\users\arnar\desktop\hello\pizzaprogram_arnar\topping.cpp
+	"Topping.h"
+	<string.h>
+
+1512495564 source:c:\users\arnar\desktop\hello\pizzaprogram_arnar\ui\mainui.cpp
+	"MainUI.h"
+
+1512495558 c:\users\arnar\desktop\hello\pizzaprogram_arnar\ui\mainui.h
+	<iostream>
+	"pizzaUI.h"
+
+1512495541 c:\users\arnar\desktop\hello\pizzaprogram_arnar\ui\pizzaui.h
+	"MainUI.h"
+	"../Model/Base.h"
+	"../Model/Pizza.h"
+	"../Repo/PizzaRepository.h"
+	"../Model/Pizza_size.h"
+	"../Repo/Find_line.h"
+	"../Model/Pizza_menu.h"
+	"../UI/ToppingsUI.h"
+	"../Domain/Admin_domain.h"
+	"../Model/Pizza_menu.h"
+	<iostream>
+
+1512238797 source:c:\users\arnar\desktop\hello\pizzaprogram_arnar\model\pizza.cpp
+	"Pizza.h"
+	<stddef.h>
+	<sstream>
+
+1512248479 c:\users\arnar\desktop\hello\pizzaprogram_arnar\model\pizza.h
+	"topping.h"
+	<iostream>
+
+1512482320 c:\users\arnar\desktop\hello\pizzaprogram_arnar\model\topping.h
+	<iostream>
+
+1512515571 source:c:\users\arnar\desktop\hello\pizzaprogram_arnar\model\topping.cpp
+	"Topping.h"
+	<string.h>
+
+1512495806 source:c:\users\arnar\desktop\hello\pizzaprogram_arnar\repo\pizzarepository.cpp
+	"PizzaRepository.h"
+	"../Repo/PizzaRepository.h"
+
+1512482225 c:\users\arnar\desktop\hello\pizzaprogram_arnar\repo\pizzarepository.h
+	"../Model/Base.h"
+	"../Model/Pizza_size.h"
+	"../Model/Topping.h"
+	"../Repo/Find_line.h"
+
+1512496445 source:c:\users\arnar\desktop\hello\pizzaprogram_arnar\ui\pizzaui.cpp
+	"PizzaUI.h"
+
+1512515519 source:c:\users\arnar\desktop\hello\pizzaprogram_arnar\model\base.cpp
+	"Base.h"
+
+1512482701 c:\users\arnar\desktop\hello\pizzaprogram_arnar\model\base.h
+	<iostream>
+
+1512515561 source:c:\users\arnar\desktop\hello\pizzaprogram_arnar\model\pizza_size.cpp
+	"Pizza_size.h"
+	<iostream>
+
+1512482701 c:\users\arnar\desktop\hello\pizzaprogram_arnar\model\pizza_size.h
+	<iostream>
+
+1512495720 source:c:\users\arnar\desktop\hello\pizzaprogram_arnar\repo\orderrepository.cpp
+	"OrderRepository.h"
+
+1512495730 c:\users\arnar\desktop\hello\pizzaprogram_arnar\repo\orderrepository.h
+	"../Model/Pizza.h"
+	<iostream>
+	<fstream>
+
+1512515616 source:c:\users\arnar\desktop\hello\pizzaprogram_arnar\repo\find_line.cpp
+	"Find_line.h"
+
+1512495710 c:\users\arnar\desktop\hello\pizzaprogram_arnar\repo\find_line.h
+	"../Domain/Admin_domain.h"
+	<sstream>
+	<fstream>
+	<vector>
+
+1512482702 source:c:\users\arnar\desktop\hello\pizzaprogram_arnar\ui\orderui.cpp
+	"OrderUI.h"
+
+1512482701 c:\users\arnar\desktop\hello\pizzaprogram_arnar\ui\orderui.h
+
+1512495458 source:c:\users\arnar\desktop\hello\pizzaprogram_arnar\ui\toppingsui.cpp
+	"ToppingsUI.h"
+
+1512495480 c:\users\arnar\desktop\hello\pizzaprogram_arnar\ui\toppingsui.h
+	"../Repo/Find_line.h"
+	"../Domain/Admin_domain.h"
+	<vector>
+	<iostream>
+	<string>
+
+1512515544 source:c:\users\arnar\desktop\hello\pizzaprogram_arnar\model\pizza_menu.cpp
+	"Pizza_menu.h"
+	"Topping.h"
+	"../Model/Pizza_menu.h"
+
+1512495945 c:\users\arnar\desktop\hello\pizzaprogram_arnar\model\pizza_menu.h
+	<iostream>
+
+1512495384 source:c:\users\arnar\desktop\hello\pizzaprogram_arnar\domain\admin_domain.cpp
+	"../Domain/Admin_domain.h"
+
+1512495384 c:\users\arnar\desktop\hello\pizzaprogram_arnar\domain\admin_domain.h
+	"../Repo/PizzaRepository.h"
+	"../Repo/Pizza_menuRepository.h"
+	"../Repo/OtherproductsRepository.h"
+	"../Model/Pizza_menu.h"
+	"../Model/Location.h"
+	"../Repo/LocationRepository.h"
+	"../Model/Otherproducts.h"
+	<vector>
+	<sstream>
+	<string>
+
+1512515656 source:c:\users\arnar\desktop\hello\pizzaprogram_arnar\repo\pizza_menurepository.cpp
+	"Pizza_menuRepository.h"
+
+1512495747 c:\users\arnar\desktop\hello\pizzaprogram_arnar\repo\pizza_menurepository.h
+	"../Model/Pizza_menu.h"
+	<fstream>
+
+1512515530 source:c:\users\arnar\desktop\hello\pizzaprogram_arnar\model\location.cpp
+	"Location.h"
+
+1512495882 c:\users\arnar\desktop\hello\pizzaprogram_arnar\model\location.h
+	<string>
+	<iostream>
+
+1512495642 source:c:\users\arnar\desktop\hello\pizzaprogram_arnar\repo\locationrepository.cpp
+	"LocationRepository.h"
+
+1512495668 c:\users\arnar\desktop\hello\pizzaprogram_arnar\repo\locationrepository.h
+	"../Model/Location.h"
+	<fstream>
+
+1512515539 source:c:\users\arnar\desktop\hello\pizzaprogram_arnar\model\otherproducts.cpp
+	"Otherproducts.h"
+
+1512492995 c:\users\arnar\desktop\hello\pizzaprogram_arnar\model\otherproducts.h
+	<iostream>
+
+1512492995 source:c:\users\arnar\desktop\hello\pizzaprogram_arnar\repo\otherproductsrepository.cpp
+	"OtherproductsRepository.h"
+	"../Model/Otherproducts.h"
+	<fstream>
+
+1512492995 c:\users\arnar\desktop\hello\pizzaprogram_arnar\repo\otherproductsrepository.h
+	"../Model/Otherproducts.h"
+
+>>>>>>> a8bf7059d9df22810c8fa6bd54be9ab501350072
