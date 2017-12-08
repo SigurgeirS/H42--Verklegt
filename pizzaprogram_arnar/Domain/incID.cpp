@@ -41,23 +41,24 @@ void incID::orderID(order& newOrder){
 	}
 
 	int inewID;
+	//converts inewID to integer
 	if(!(istringstream(newID) >> inewID)){
 
 		inewID = 0;
 
 	};
-
+	//increments inewID by one
 	inewID++;
-
+	//converts inewID back to string
 	ostringstream convert;
 	convert << inewID;
 
 	string ID = convert.str();
-
+	//sets order.ID = inewID
 	newOrder.setID(ID);
-
+	
 	fout.open("orderID.txt");
-
+	//records the new ID for later use
 	if(fout.is_open()){
 
 		fout<<ID;

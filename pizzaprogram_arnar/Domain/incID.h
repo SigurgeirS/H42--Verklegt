@@ -11,7 +11,9 @@ class incID{
 
 	public:
 		incID();
+		//sets id records to zero
 		void resetOrderID();
+		//Sets ID to latest ID + one
 		void orderID(order& newOrder);
 	
 
