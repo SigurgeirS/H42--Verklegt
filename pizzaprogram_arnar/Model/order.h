@@ -23,7 +23,7 @@ class order{
 		double getPrice();
 		
 		friend istream& operator >> (istream& in, order& order);
-		friend ostream& operator << (ostream& out, order& order);
+		friend ostream& operator << (ostream& out, const order& order);
 };
 
 

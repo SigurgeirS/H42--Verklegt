@@ -35,14 +35,8 @@ istream& operator >> (istream& in, order& order){
 	return in;
 };
 
-ostream& operator << (ostream& out, order& order){
+ostream& operator << (ostream& out, const order& order){
 	out<<order.ID<<", "<<order.name<<", "<<order.delivery<<", "<<order.status<<", "<<order.price<<endl;
 	return out;
 };
 
-int main(){
-	order ord;
-	cin>>ord;
-	cout<<ord;
-	return 0;
-}
