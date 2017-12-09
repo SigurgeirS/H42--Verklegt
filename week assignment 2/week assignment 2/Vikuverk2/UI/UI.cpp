@@ -49,7 +49,9 @@ void UI::main_menu(){
     }
     break;
     case 4: {
-        cout << services.highest_total_year_salary_name("1997") << endl;
+	string year = "";
+        cin >> year;
+        cout << services.highest_total_year_salary_name(year) << endl;
     }
 	}
     }
