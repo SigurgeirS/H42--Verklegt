@@ -11,7 +11,7 @@ using namespace std;
 class Validate {
 	private:
 	public:
-		validate();
+		Validate();
 		void okName(const string& name) throw (InvalidNameException);
 		void okSSN(const string& SSN) throw (InvalidSsnException);
 		void okYear(const string& year) throw (InvalidYearException);
