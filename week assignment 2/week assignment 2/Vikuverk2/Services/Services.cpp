@@ -12,7 +12,12 @@ vector<string> Services::find_month(string ssn_in)
 {
     Repo repo;
     vector<string> months;
-    vector<string> all_items = repo.read_all_items(filename);
+    try{
+    	vector<string> all_items = repo.read_all_items(filename);
+    }
+    catch(FileNotOpenException){
+	    cout<<"Could not open file"<<endl;
+    }
     for(unsigned int i = 0; i < all_items.size(); i++)
     {
 
@@ -29,7 +34,12 @@ vector<string> Services::replace_line(string file,string input_month,string line
     Model model;
     Repo repo;
     stringstream stream;
-    vector<string> items = repo.read_all_items(file);
+    try{
+    	vector<string> items = repo.read_all_items(file);
+    }
+    catch(FileNotOpenException){
+	    cout<<"Could not open file"<<endl;
+    }
     for(unsigned int i = 0; i < items.size(); i++)
     {
 
@@ -58,12 +68,18 @@ bool Services::is_same(vector<string> items,string input,int column)
 void Services::Store_employees(Model& model)
 {
     Repo repo;
-    repo.storeemployees(model);
+    try{
+   	 repo.storeemployees(model);
+    }
+    catch(FileNotOpenException){
+	    cout<<"Could not open file"<<endl;
+    }
 }
 
 vector<string> Services::Find_salary_records(string to_find, int column)
 {
     Repo repo;
+    try{
     repo.read_all_items("employees.txt");
     vector<string> all_items = repo.read_all_items(filename);
     vector<string> found_lines;
@@ -73,6 +89,10 @@ vector<string> Services::Find_salary_records(string to_find, int column)
         {
             found_lines.push_back(all_items[i]);
         }
+    }
+    }
+    catch(FileNotOpenException){
+	    cout<<"Could not open file"<<endl;
     }
     return found_lines;
 }
@@ -155,6 +175,7 @@ int Services::highest_total_year_salary(string ssn, string year)
 
 string Services::highest_total_year_salary_name(string year)
 {
+	try{
     Repo repo;
     vector<string> all_items = repo.read_all_items(filename);
     string name = "";
@@ -169,5 +190,8 @@ string Services::highest_total_year_salary_name(string year)
         }
 
     }
+	}catch(FileNotOpenException){
+		cout<<"Could not open file"<<endl;
+	}
     return name;
 }
