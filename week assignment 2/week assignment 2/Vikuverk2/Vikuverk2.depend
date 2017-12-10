@@ -13,7 +13,7 @@
 1512669609 c:\users\arnar\desktop\hello\vikuverk2\domain\exceptions.h
 	<stdio.h>
 
-1512750026 c:\users\arnar\desktop\hello\vikuverk2\ui\ui.h
+1512886674 c:\users\arnar\desktop\hello\vikuverk2\ui\ui.h
 	<iostream>
 	<stdio.h>
 	"../Services/Services.h"
@@ -25,27 +25,29 @@
 	"Domain.h"
 	"../Repo/Repo.h"
 
-1512747596 c:\users\arnar\desktop\hello\vikuverk2\model\model.h
+1512885959 c:\users\arnar\desktop\hello\vikuverk2\model\model.h
 	<stdio.h>
 	<iostream>
 	<string>
 
-1512755380 c:\users\arnar\desktop\hello\vikuverk2\repo\repo.h
+1512886087 c:\users\arnar\desktop\hello\vikuverk2\repo\repo.h
 	<fstream>
 	<vector>
+	<stdio.h>
 	"../Model/Model.h"
+	"../Services/Services.h"
 
-1512749524 source:c:\users\arnar\desktop\hello\vikuverk2\main.cpp
+1512886075 source:c:\users\arnar\desktop\hello\vikuverk2\main.cpp
 	<iostream>
 	"UI/UI.h"
 
-1512748413 source:c:\users\arnar\desktop\hello\vikuverk2\model\model.cpp
+1512885977 source:c:\users\arnar\desktop\hello\vikuverk2\model\model.cpp
 	"Model.h"
 
-1512755457 source:c:\users\arnar\desktop\hello\vikuverk2\repo\repo.cpp
+1512886024 source:c:\users\arnar\desktop\hello\vikuverk2\repo\repo.cpp
 	"Repo.h"
 
-1512766948 source:c:\users\arnar\desktop\hello\vikuverk2\ui\ui.cpp
+1512884967 source:c:\users\arnar\desktop\hello\vikuverk2\ui\ui.cpp
 	"UI.h"
 
 1512700687 c:\users\arnar\desktop\hello\vikuverk2\services\domain.h
@@ -68,14 +70,13 @@
 	"Domain.h"
 	"../UI/UI.h"
 
-1512766456 c:\users\arnar\desktop\hello\vikuverk2\services\services.h
+1512886094 c:\users\arnar\desktop\hello\vikuverk2\services\services.h
 	<vector>
+	<string>
 	<sstream>
 	"../Model/Model.h"
 	"../Repo/Repo.h"
-	<vector>
-	<string>
 
-1512766915 source:c:\users\arnar\desktop\hello\vikuverk2\services\services.cpp
+1512886046 source:c:\users\arnar\desktop\hello\vikuverk2\services\services.cpp
 	"Services.h"
 

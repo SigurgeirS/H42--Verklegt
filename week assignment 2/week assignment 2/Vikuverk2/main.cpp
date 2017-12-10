@@ -8,9 +8,9 @@
 
 #include <iostream>
 #include "UI/UI.h"
-int main(int argc, const char * argv[]) {
-	// insert code here...
+int main(int argc, const char * argv[])
+{
     UI ui;
     ui.main_menu();
-	return 0;
+    return 0;
 }
