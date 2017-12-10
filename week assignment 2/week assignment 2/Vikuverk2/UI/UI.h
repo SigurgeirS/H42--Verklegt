@@ -1,11 +1,3 @@
-//
-//  UI.hpp
-//  week assignment 2
-//
-//  Created by Halldór Alvar Kjartansson on 06/12/2017.
-//  Copyright © 2017 Halldór Alvar Kjartansson. All rights reserved.
-//
-
 #ifndef UI_h
 #define UI_h
 #include <iostream>
@@ -13,12 +5,12 @@
 #include "../Services/Services.h"
 #include "../Model/Model.h"
 
-class UI {
-
+class UI
+{
 public:
-	void main_menu();
-	void display_items(vector<string> items);
+    void main_menu();
+    void display_items(vector<string> items);
+    void go_back();
 private:
-
 };
-#endif /* UI_hpp */
+#endif

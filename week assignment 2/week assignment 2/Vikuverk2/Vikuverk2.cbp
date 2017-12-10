@@ -36,7 +36,6 @@
 		<Unit filename="Model/Model.h" />
 		<Unit filename="Repo/Repo.cpp" />
 		<Unit filename="Repo/Repo.h" />
-		<Unit filename="Services/Exceptions.h" />
 		<Unit filename="Services/Services.cpp" />
 		<Unit filename="Services/Services.h" />
 		<Unit filename="UI/UI.cpp" />

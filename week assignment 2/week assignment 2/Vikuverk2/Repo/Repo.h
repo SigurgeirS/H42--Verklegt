@@ -1,22 +1,18 @@
-//
-//  Repo.hpp
-//  week assignment 2
-//
-//  Created by Halldór Alvar Kjartansson on 06/12/2017.
-//  Copyright © 2017 Halldór Alvar Kjartansson. All rights reserved.
-//
-
 #ifndef Repo_h
 #define Repo_h
 #include <fstream>
 #include <vector>
+#include <stdio.h>
 #include "../Model/Model.h"
+#include "../Services/Services.h"
 
 using namespace std;
 
-class Repo {
+class Repo
+{
 public:
-	vector<string> retrive_all_items(string file);
-	void storeemployees(Model& model);
+    void storeemployees(Model& model);
+    vector<string> read_all_items(string file);
+
 };
-#endif /* Repo_hpp */
+#endif
