@@ -39,4 +39,3 @@ ostream& operator << (ostream& out, const order& order){
 	out<<order.ID<<", "<<order.name<<", "<<order.delivery<<", "<<order.status<<", "<<order.price<<endl;
 	return out;
 };
-

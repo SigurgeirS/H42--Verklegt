@@ -70,4 +70,3 @@ void incID::orderID(order& newOrder){
 
 	}
 }
-
