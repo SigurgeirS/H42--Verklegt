@@ -19,7 +19,7 @@ void UI::main_menu()
     Services services;
     int selection = 0;
     string ssn = "";
-    string year = "";
+    string year = model.get_year();
     string goback = "";
     do{
     system("CLS");
@@ -40,7 +40,8 @@ void UI::main_menu()
     {
         cout << "Type in a ssn:" << endl;
         cin >> ssn;
-        this->display_items(services.Find_salary_records(ssn, 2));
+        model.set_ssn(ssn);
+        this->display_items(services.Find_salary_records(model.get_ssn(), 2));
         go_back();
     }
     break;

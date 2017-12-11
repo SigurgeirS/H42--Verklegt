@@ -32,12 +32,26 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="Exceptions/CantOpenFile.cpp" />
+		<Unit filename="Exceptions/CantOpenFile.h" />
+		<Unit filename="Exceptions/InvalidMonthException.cpp" />
+		<Unit filename="Exceptions/InvalidMonthException.h" />
+		<Unit filename="Exceptions/InvalidNameException.cpp" />
+		<Unit filename="Exceptions/InvalidNameException.h" />
+		<Unit filename="Exceptions/InvalidSalaryException.cpp" />
+		<Unit filename="Exceptions/InvalidSalaryException.h" />
+		<Unit filename="Exceptions/InvalidSsnException.cpp" />
+		<Unit filename="Exceptions/InvalidSsnException.h" />
+		<Unit filename="Exceptions/InvalidYearException.cpp" />
+		<Unit filename="Exceptions/InvalidYearException.h" />
 		<Unit filename="Model/Model.cpp" />
 		<Unit filename="Model/Model.h" />
 		<Unit filename="Repo/Repo.cpp" />
 		<Unit filename="Repo/Repo.h" />
 		<Unit filename="Services/Services.cpp" />
 		<Unit filename="Services/Services.h" />
+		<Unit filename="Services/Validate.cpp" />
+		<Unit filename="Services/Validate.h" />
 		<Unit filename="UI/UI.cpp" />
 		<Unit filename="UI/UI.h" />
 		<Unit filename="main.cpp" />

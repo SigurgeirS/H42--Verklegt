@@ -12,11 +12,14 @@ public:
     Model();
     friend ostream& operator << (ostream& out, Model& model);
     friend istream& operator >> (istream& in, Model& model);
-    string get_name();
     string get_ssn();
-    string get_salary();
     string get_month();
     string get_year();
+    void set_ssn(string ssn);
+    void set_month(string month);
+    void set_year(string year);
+    void set_name(string name);
+    void set_salary(string salary);
 private:
     string name;
     string ssn;
