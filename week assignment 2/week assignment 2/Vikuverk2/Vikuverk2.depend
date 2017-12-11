@@ -25,29 +25,31 @@
 	"Domain.h"
 	"../Repo/Repo.h"
 
-1512885959 c:\users\arnar\desktop\hello\vikuverk2\model\model.h
+1512953616 c:\users\arnar\desktop\hello\vikuverk2\model\model.h
 	<stdio.h>
 	<iostream>
 	<string>
+	"../Services/Validate.h"
 
-1512886087 c:\users\arnar\desktop\hello\vikuverk2\repo\repo.h
+1512937129 c:\users\arnar\desktop\hello\vikuverk2\repo\repo.h
 	<fstream>
 	<vector>
 	<stdio.h>
 	"../Model/Model.h"
 	"../Services/Services.h"
+	"../Exceptions/CantOpenFile.h"
 
 1512886075 source:c:\users\arnar\desktop\hello\vikuverk2\main.cpp
 	<iostream>
 	"UI/UI.h"
 
-1512885977 source:c:\users\arnar\desktop\hello\vikuverk2\model\model.cpp
+1512953602 source:c:\users\arnar\desktop\hello\vikuverk2\model\model.cpp
 	"Model.h"
 
-1512886024 source:c:\users\arnar\desktop\hello\vikuverk2\repo\repo.cpp
+1512961464 source:c:\users\arnar\desktop\hello\vikuverk2\repo\repo.cpp
 	"Repo.h"
 
-1512884967 source:c:\users\arnar\desktop\hello\vikuverk2\ui\ui.cpp
+1512940206 source:c:\users\arnar\desktop\hello\vikuverk2\ui\ui.cpp
 	"UI.h"
 
 1512700687 c:\users\arnar\desktop\hello\vikuverk2\services\domain.h
@@ -77,6 +79,49 @@
 	"../Model/Model.h"
 	"../Repo/Repo.h"
 
-1512886046 source:c:\users\arnar\desktop\hello\vikuverk2\services\services.cpp
+1512932049 source:c:\users\arnar\desktop\hello\vikuverk2\services\services.cpp
 	"Services.h"
+
+1512929005 source:c:\users\arnar\desktop\hello\vikuverk2\exceptions\invalidmonthexception.cpp
+	"InvalidMonthException.h"
+
+1512929005 c:\users\arnar\desktop\hello\vikuverk2\exceptions\invalidmonthexception.h
+
+1512928951 source:c:\users\arnar\desktop\hello\vikuverk2\exceptions\invalidnameexception.cpp
+	"InvalidNameException.h"
+
+1512928951 c:\users\arnar\desktop\hello\vikuverk2\exceptions\invalidnameexception.h
+
+1512928991 source:c:\users\arnar\desktop\hello\vikuverk2\exceptions\invalidsalaryexception.cpp
+	"InvalidSalaryException.h"
+
+1512928991 c:\users\arnar\desktop\hello\vikuverk2\exceptions\invalidsalaryexception.h
+
+1512928964 source:c:\users\arnar\desktop\hello\vikuverk2\exceptions\invalidssnexception.cpp
+	"InvalidSsnException.h"
+
+1512928964 c:\users\arnar\desktop\hello\vikuverk2\exceptions\invalidssnexception.h
+
+1512928975 source:c:\users\arnar\desktop\hello\vikuverk2\exceptions\invalidyearexception.cpp
+	"InvalidYearException.h"
+
+1512928975 c:\users\arnar\desktop\hello\vikuverk2\exceptions\invalidyearexception.h
+
+1512946325 source:c:\users\arnar\desktop\hello\vikuverk2\services\validate.cpp
+	"Validate.h"
+
+1512929444 c:\users\arnar\desktop\hello\vikuverk2\services\validate.h
+	<string>
+	"../Exceptions/InvalidNameException.h"
+	"../Exceptions/InvalidSsnException.h"
+	"../Exceptions/InvalidYearException.h"
+	"../Exceptions/InvalidSalaryException.h"
+	"../Exceptions/InvalidMonthException.h"
+	<iostream>
+	<sstream>
+
+1512935886 source:c:\users\arnar\desktop\hello\vikuverk2\exceptions\cantopenfile.cpp
+	"CantOpenFile.h"
+
+1512935886 c:\users\arnar\desktop\hello\vikuverk2\exceptions\cantopenfile.h
 

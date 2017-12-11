@@ -5,15 +5,15 @@
 #include <stdio.h>
 #include "../Model/Model.h"
 #include "../Services/Services.h"
-#include "../Exceptions/Exceptions.h"
+#include "../Exceptions/CantOpenFile.h"
 
 using namespace std;
 
 class Repo
 {
 public:
-    void storeemployees(Model& model) throw (FileNotOpenException);
-    vector<string> read_all_items(string file) throw (FileNotOpenException);
+    void storeemployees(Model& model);
+    vector<string> read_all_items(string file);
 
 };
 #endif

@@ -2,7 +2,11 @@
 #define VALIDATE_H
 
 #include <string>
-#include "../Exceptions/Exceptions.h"
+#include "../Exceptions/InvalidNameException.h"
+#include "../Exceptions/InvalidSsnException.h"
+#include "../Exceptions/InvalidYearException.h"
+#include "../Exceptions/InvalidSalaryException.h"
+#include "../Exceptions/InvalidMonthException.h"
 #include <iostream>
 #include <sstream>
 
