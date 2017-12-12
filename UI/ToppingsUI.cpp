@@ -25,7 +25,7 @@ void ToppingsUI::startUI()
 
     for(int i = 0; i < (size-1); i++)
     {
-        display_these_lines.push_back("a");
+        display_these_lines.push_back(to_string((i+1) << ". " << all_toppings[i])));
 
     }
     pizzaui.read_format_three(display_these_lines);
