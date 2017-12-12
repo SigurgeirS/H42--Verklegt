@@ -6,7 +6,6 @@
 #include "../Model/Pizza_menu.h"
 #include "../Model/Location.h"
 #include "../Repo/LocationRepository.h"
-#include "../Model/Otherproducts.h"
 ///Include for toppings
 #include "../Exceptions/invalid_topping/InvalidToppingCount.h"
 #include "../Exceptions/invalid_topping/InvalidToppingName.h"
@@ -45,7 +44,6 @@ public:
     void record_base(Base& base);
     void record_size(Pizza_size& pizzasize);
     void record_menu(Pizza_menu& pizzamenu,string line);
-    void record_other_products(Otherproducts& otherproducts);
     void record_location(Location& location);
     ///Checking toppings
     void check_topping_count(int counter) throw (InvalidToppingCount);

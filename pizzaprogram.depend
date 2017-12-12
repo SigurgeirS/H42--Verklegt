@@ -117,7 +117,7 @@
 1513091018 source:c:\users\arnar\desktop\hello\pizzaprogram_arnar\ui\pizzaui.cpp
 	"PizzaUI.h"
 
-1512603570 source:c:\users\arnar\desktop\hello\pizzaprogram_arnar\model\base.cpp
+1513092074 source:c:\users\arnar\desktop\hello\pizzaprogram_arnar\model\base.cpp
 	"Base.h"
 
 1512590183 c:\users\arnar\desktop\hello\pizzaprogram_arnar\model\base.h
@@ -171,18 +171,17 @@
 1512649006 c:\users\arnar\desktop\hello\pizzaprogram_arnar\model\pizza_menu.h
 	<iostream>
 
-1513090728 source:c:\users\arnar\desktop\hello\pizzaprogram_arnar\domain\admin_domain.cpp
+1513092069 source:c:\users\arnar\desktop\hello\pizzaprogram_arnar\domain\admin_domain.cpp
 	"../Domain/Admin_domain.h"
 	"../UI/PizzaUI.h"
 
-1513090765 c:\users\arnar\desktop\hello\pizzaprogram_arnar\domain\admin_domain.h
+1513095219 c:\users\arnar\desktop\hello\pizzaprogram_arnar\domain\admin_domain.h
 	"../Repo/PizzaRepository.h"
 	"../Repo/Pizza_menuRepository.h"
 	"../Repo/OtherproductsRepository.h"
 	"../Model/Pizza_menu.h"
 	"../Model/Location.h"
 	"../Repo/LocationRepository.h"
-	"../Model/Otherproducts.h"
 	"../Exceptions/invalid_topping/InvalidToppingCount.h"
 	"../Exceptions/invalid_topping/InvalidToppingName.h"
 	"../Exceptions/invalid_topping/InvalidToppingPrice.h"
@@ -237,8 +236,7 @@
 	"../Model/Otherproducts.h"
 	<fstream>
 
-1512492995 c:\users\arnar\desktop\hello\pizzaprogram_arnar\repo\otherproductsrepository.h
-	"../Model/Otherproducts.h"
+1513095204 c:\users\arnar\desktop\hello\pizzaprogram_arnar\repo\otherproductsrepository.h
 
 1512564002 source:c:\users\arnar\desktop\hello\pizzaprogram_arnar\exceptions\invalid_topping_number.cpp
 	"Invalid_topping_number.h"
