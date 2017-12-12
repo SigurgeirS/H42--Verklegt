@@ -12,6 +12,7 @@ class orderDomain{
 	public:
 		orderDomain();
 		void addOrder(const order& newOrder);
+		void getOrderList(const vector<order>& orderlist);
 
 
 };

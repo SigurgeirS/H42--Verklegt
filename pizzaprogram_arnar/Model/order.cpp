@@ -2,6 +2,7 @@
 
 order::order(){
 	//constructor
+
 };
 
 string order::getID(){
@@ -26,16 +27,36 @@ void order::setID(string ID){
 
 
 istream& operator >> (istream& in, order& order){
-	cout<<"Name: ";
-	in>>order.name;
-	cout<<"Delivery method: ";
+
+
+	if(order.verbose){
+		cout<<"ID: ";
+	}
+	in>>order.ID;	
+	in.ignore();
+	if(order.verbose){
+		cout<<"Name: ";
+	}
+	getline(in, order.name);
+	if(order.verbose){
+		cout<<"Delivery method: ";
+	}
 	in>>order.delivery;
-	cout<<"Status: ";
+	if(order.verbose){
+		cout<<"Order Status: ";
+	}
 	in>>order.status;
+	if(order.verbose){
+		cout<<"Total cost of order: ";
+	}
+	in>>order.price;
+	if(order.verbose){
+	}
 	return in;
 };
 
 ostream& operator << (ostream& out, const order& order){
-	out<<order.ID<<", "<<order.name<<", "<<order.delivery<<", "<<order.status<<", "<<order.price<<endl;
+	out<<order.ID<<endl<<order.name<<endl<<order.delivery<<endl<<order.status<<endl<<order.price<<endl;
 	return out;
 };
+

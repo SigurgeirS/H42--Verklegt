@@ -15,6 +15,7 @@ class order{
 		double price;
 		
 	public:
+		bool verbose;
 		order();
 		string getID();
 		string getName();

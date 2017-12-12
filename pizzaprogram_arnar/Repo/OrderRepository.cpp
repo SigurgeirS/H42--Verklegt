@@ -16,3 +16,25 @@ void OrderRepository::add(const order& newOrder){
 		//throw error
 	}
 }
+
+vector<order> OrderRepository::fetch() {
+	ifstream fin;
+	vector<order> orders;
+
+	fin.open("orderlist.txt");
+	if(fin.is_open()){
+		order forder;
+		forder.verbose = false;
+
+		while(fin.good()){
+			fin>>forder;
+			orders.push_back(forder);
+		}
+		fin.close();
+		orders.pop_back();
+	}else{
+		cout<<"could not open file"<<endl;
+	}
+	return orders;
+}
+
