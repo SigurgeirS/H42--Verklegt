@@ -16,16 +16,19 @@ string ToppingsUI::get_toppingline()
 }
 void ToppingsUI::startUI()
 {
+    PizzaUI pizzaui;
     Admin_domain admindomain;
     vector<string> all_toppings = admindomain.read_all_toppings();
+    vector<string> display_these_lines;
     int size = all_toppings.size();
     int selection = 0;
-    cout << "Pick a topping: " << endl;
+
     for(int i = 0; i < (size-1); i++)
     {
-        cout << (i+1) << ". " << all_toppings[i] << endl;
+        display_these_lines.push_back("a");
 
     }
+    pizzaui.read_format_three(display_these_lines);
     cin >> selection;
     cout << all_toppings[selection-1] << endl;
     this->toppingline = all_toppings[selection-1];

@@ -59,7 +59,7 @@ public:
     ///Checking size
     void check_pizza_size(Pizza_size& pizzasize);
     void check_pizza_size_price(Pizza_size& pizzasize);
-    void check_size_count(int counter);
+    void check_size_count(int counter) throw(InvalidSizeCount);
     ///Checking location
     void check_location_name(Location& location);
     void check_location_count(int counter);
@@ -71,6 +71,7 @@ public:
     string retrieveItem(string filename, string id);
     vector<string> read_all_toppings();
     void invalid_input();
+    string get_column(string line, int column);
     void clear_input_stream();
     virtual ~Admin_domain();
 

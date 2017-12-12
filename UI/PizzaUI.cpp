@@ -19,6 +19,25 @@ void display(string* toppings, int topCnt)
         cout << toppings[i] << endl;
     }
 }
+
+///Reading ID,NAME,PRICE
+void PizzaUI::read_format_three(vector<string> lines){
+    string ID = "";
+    string name = "";
+    string price = "";
+    Admin_domain admindomain;
+
+     for(unsigned int i = 0; i < lines.size(); i++){
+         ID = admindomain.get_column(lines[i],1);
+         name = admindomain.get_column(lines[i],2);
+         price = admindomain.get_column(lines[i],3);
+     }
+
+    cout << "===========================" << endl;
+    cout << "|  ID  |  NAME  |  PRICE  |" << endl;
+    cout << "===========================" << endl;
+    cout << "   "<<ID<<"  "<<name<<" "<<price<< endl;
+}
 /*Displays recorded data more user friendly*/
 
 /*void display_toppings(string* toppings, int topCnt){
@@ -47,9 +66,9 @@ Admin_domain PizzaUI::get_admin_domain()
 void PizzaUI::goback()
 {
     cout << endl;
-    string a = "";
+    string input = "";
     cout << "Press any key to go back..." << endl;
-    cin >> a;
+    cin >> input;
 }
 /*Reads lines from an array*/
 void PizzaUI::display(int counter, string* line_array)
@@ -99,6 +118,9 @@ void PizzaUI::record_base()
         cin >> base;
         get_admin_domain().record_base(base);
     }
+}
+    catch(InvalidBaseCount){
+        cout << "Invalid base count!" << endl;
     }
     catch(InvalidBaseName){
         cout << "Invalid base name!" << endl;
@@ -117,23 +139,21 @@ void PizzaUI::record_sizes()
     cout << "How many sizes: " << endl;
     cin >> sizeCnt;
     get_admin_domain().check_size_count(sizeCnt);
-    string* sizes = new string[sizeCnt];
-
     for(int i = 0; i < sizeCnt; i++)
     {
         Pizza_size pizza_size;
         cin >> pizza_size;
         get_admin_domain().record_size(pizza_size);
     }
-    display(sizeCnt,sizes);
-    delete[] sizes;
     }
     catch(InvalidSize){
         cout << "Invalid size!" << endl;
     }
-
     catch(Invalidsizeprice){
         cout << "Invalid size price!" << endl;
+    }
+    catch(InvalidSizeCount){
+        cout << "Invalid size count!" << endl;
     }
 }
 
@@ -196,20 +216,6 @@ void PizzaUI::record_locations()
     }
 }
 
-void PizzaUI::record_other_products()
-{
-    Otherproducts otherproducts;
-    int otherproductsCnt = 0;
-    cout << "How many products? " << endl;
-    cin >> otherproductsCnt;
-
-    for(int i = 0; i < otherproductsCnt; i++)
-    {
-        cin >> otherproducts;
-        get_admin_domain().record_other_products(otherproducts);
-    }
-}
-
 void PizzaUI::startUI()
 {
 
@@ -257,7 +263,6 @@ void PizzaUI::startUI()
 
         case 5:
         {
-            record_other_products();
             goback();
         }
         break;

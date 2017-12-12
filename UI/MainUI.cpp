@@ -18,6 +18,7 @@ void MainUI::startUI()
         cout << "b: Baking" << endl;
         cout << "d: Delivery" << endl;
         cin >> selection;
+
         switch(selection)
         {
         case 'a':
@@ -49,6 +50,9 @@ void MainUI::startUI()
             cout << endl;
         }
         break;
+        default:
+            cout << "Wrong input!" << endl;
+            break;
 
         }
     }

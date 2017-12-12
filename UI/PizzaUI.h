@@ -29,6 +29,7 @@ public:
     void record_other_products();
     void goback();
     void display(int counter, string* line_array);
+    void read_format_three(vector<string> lines);
     virtual ~PizzaUI();
 
 private:

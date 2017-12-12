@@ -2,6 +2,7 @@
 #define TOPPINGSUI_H
 #include "../Repo/Find_line.h"
 #include "../Domain/Admin_domain.h"
+#include "PizzaUI.h"
 #include<vector>
 #include<iostream>
 #include<string>

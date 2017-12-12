@@ -18,8 +18,7 @@ vector<string> Find_line::retrive_all_items(string file)
     ifstream fin;
     string line = "";
     fin.open(file);
-
-    while(fin >> line)
+    while(!fin.eof())
     {
         getline(fin,line);
         toppings.push_back(line);

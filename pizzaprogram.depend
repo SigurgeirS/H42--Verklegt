@@ -68,14 +68,14 @@
 	"Topping.h"
 	<string.h>
 
-1512495564 source:c:\users\arnar\desktop\hello\pizzaprogram_arnar\ui\mainui.cpp
+1513090704 source:c:\users\arnar\desktop\hello\pizzaprogram_arnar\ui\mainui.cpp
 	"MainUI.h"
 
 1512495558 c:\users\arnar\desktop\hello\pizzaprogram_arnar\ui\mainui.h
 	<iostream>
 	"pizzaUI.h"
 
-1512495541 c:\users\arnar\desktop\hello\pizzaprogram_arnar\ui\pizzaui.h
+1513090834 c:\users\arnar\desktop\hello\pizzaprogram_arnar\ui\pizzaui.h
 	"MainUI.h"
 	"../Model/Base.h"
 	"../Model/Pizza.h"
@@ -114,7 +114,7 @@
 	"../Model/Topping.h"
 	"../Repo/Find_line.h"
 
-1512667804 source:c:\users\arnar\desktop\hello\pizzaprogram_arnar\ui\pizzaui.cpp
+1513091018 source:c:\users\arnar\desktop\hello\pizzaprogram_arnar\ui\pizzaui.cpp
 	"PizzaUI.h"
 
 1512603570 source:c:\users\arnar\desktop\hello\pizzaprogram_arnar\model\base.cpp
@@ -138,7 +138,7 @@
 	<iostream>
 	<fstream>
 
-1512657427 source:c:\users\arnar\desktop\hello\pizzaprogram_arnar\repo\find_line.cpp
+1513017524 source:c:\users\arnar\desktop\hello\pizzaprogram_arnar\repo\find_line.cpp
 	"Find_line.h"
 
 1512495710 c:\users\arnar\desktop\hello\pizzaprogram_arnar\repo\find_line.h
@@ -152,12 +152,13 @@
 
 1512482701 c:\users\arnar\desktop\hello\pizzaprogram_arnar\ui\orderui.h
 
-1512495458 source:c:\users\arnar\desktop\hello\pizzaprogram_arnar\ui\toppingsui.cpp
+1513016452 source:c:\users\arnar\desktop\hello\pizzaprogram_arnar\ui\toppingsui.cpp
 	"ToppingsUI.h"
 
-1512495480 c:\users\arnar\desktop\hello\pizzaprogram_arnar\ui\toppingsui.h
+1513091446 c:\users\arnar\desktop\hello\pizzaprogram_arnar\ui\toppingsui.h
 	"../Repo/Find_line.h"
 	"../Domain/Admin_domain.h"
+	"PizzaUI.h"
 	<vector>
 	<iostream>
 	<string>
@@ -170,11 +171,11 @@
 1512649006 c:\users\arnar\desktop\hello\pizzaprogram_arnar\model\pizza_menu.h
 	<iostream>
 
-1512666482 source:c:\users\arnar\desktop\hello\pizzaprogram_arnar\domain\admin_domain.cpp
+1513090728 source:c:\users\arnar\desktop\hello\pizzaprogram_arnar\domain\admin_domain.cpp
 	"../Domain/Admin_domain.h"
 	"../UI/PizzaUI.h"
 
-1512666823 c:\users\arnar\desktop\hello\pizzaprogram_arnar\domain\admin_domain.h
+1513090765 c:\users\arnar\desktop\hello\pizzaprogram_arnar\domain\admin_domain.h
 	"../Repo/PizzaRepository.h"
 	"../Repo/Pizza_menuRepository.h"
 	"../Repo/OtherproductsRepository.h"

@@ -5,6 +5,18 @@ Admin_domain::Admin_domain()
 {
 
 }
+///Gets a cilumn from a line
+string Admin_domain::get_column(string line, int column)
+{
+    stringstream stream;
+    string found = "";
+    stream << line;
+    for(int i = 0; i < column; i++)
+    {
+        getline(stream,found,',');
+    }
+    return found;
+}
 
 ///Topping check
 void Admin_domain::check_topping_count(int counter) throw (InvalidToppingCount){
@@ -65,7 +77,7 @@ void Admin_domain::check_base_price(Base& base){
 }
 
 ///Size check
-void Admin_domain::check_size_count(int counter){
+void Admin_domain::check_size_count(int counter) throw (InvalidSizeCount){
      if(cin.fail()){
         clear_input_stream();
         throw InvalidSizeCount();
@@ -75,7 +87,7 @@ void Admin_domain::check_size_count(int counter){
 void Admin_domain::check_pizza_size_price(Pizza_size& pizzasize){
       if(cin.fail()){
         clear_input_stream();
-        throw InvalidBasePrice();
+        throw Invalidsizeprice();
      }
 }
 
@@ -158,8 +170,8 @@ void Admin_domain::record_menu(Pizza_menu& pizzamenu,string line)
 void Admin_domain::record_size(Pizza_size& pizza_size)
 {
     PizzaRepository pizzarepo;
-    this->check_pizza_size(pizza_size);
     this->check_pizza_size_price(pizza_size);
+    this->check_pizza_size(pizza_size);
     pizzarepo.storeSize(pizza_size);
 }
 
@@ -175,19 +187,6 @@ void Admin_domain::record_location(Location& location)
     this->check_location_name(location);
     locationrepo.storelocation(location);
 }
-
-void Admin_domain::record_other_products(Otherproducts& otherproducts)
-{
-    OtherproductsRepository otherproductsrepo;
-    otherproductsrepo.storeproduct(otherproducts);
-}
-/*string* Admin_domain::read_toppings(Topping& topping, int topCnt){
-     Find_line findline;
-     findline.retrieveItem()
-    string* toppings = new string[topCnt];
-
-    return toppings;
-}*/
 
 void Admin_domain::clear_input_stream(){
         cin.clear();
