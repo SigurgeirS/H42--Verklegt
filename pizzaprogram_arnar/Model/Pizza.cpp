@@ -1,79 +1,5 @@
-<<<<<<< HEAD
 #include "Pizza.h"
-#include <stddef.h>
-/*Holds information about our pizza*/
-Pizza::Pizza()
-{
-    toppingcount = 0;
-    toppings = 0;
-    currenttopping_Num = 0;
-}
-Pizza::Pizza(int numberOfToppings)
-{
-    initalize(numberOfToppings);
-}
-Pizza::~Pizza()
-{
-    clean();
-}
-
-void Pizza::initalize(int numberOfToppings)
-{
-    clean();
-    toppingcount = numberOfToppings;
-    toppings = new Topping[toppingcount];
-    currenttopping_Num = 0;
-}
-
-void Pizza::addTopping(Topping topping)
-{
-    toppings[currenttopping_Num] = topping;
-    if(currenttopping_Num < toppingcount)
-    {
-        toppings[currenttopping_Num] = topping;
-        currenttopping_Num++;
-    }
-}
-
-ostream& operator << (ostream& out, const Pizza& pizza)
-{
-
-    out << pizza.toppingcount << " ";
-    for(int i = 0; i < pizza.toppingcount; i++)
-    {
-        out << pizza.toppings[i] << " ";
-    }
-    return out;
-}
-
-istream& operator >>(istream& in, Pizza& pizza)
-{
-    int toppingcount;
-    in >> toppingcount;
-
-    pizza.initalize(toppingcount);
-
-    Topping topping;
-    for(int i = 0; i < pizza.toppingcount; i++)
-    {
-        in >> topping;
-        pizza.addTopping(topping);
-    }
-    return in;
-}
-
-void Pizza::clean()
-{
-    if(toppings != 0)
-    {
-        delete[] toppings;
-    }
-    toppingcount = 0;
-    toppings = NULL;
-    currenttopping_Num = 0;
-}
-=======
-#include "Pizza.h"
+//REMEMBER VERBOSE IN REPOSITORY.
 Pizza::Pizza()
 {
 	//constructor
@@ -85,18 +11,26 @@ string Pizza::getID(){
 
 ostream& operator << (ostream& out, const Pizza& pizza)
 {
-	out<<pizza.ID<<", "<<pizza.price<<endl;
+	if(pizza.verbose == false){
+		out<<pizza.ID<<endl<<pizza.price<<endl;
+	}
+	if(pizza.verbose == true){
+		out<<"ID: "<<pizza.ID<<endl<<"Price: "<<pizza.price<<endl;
+	}
 
         return out;
 }
 
-istream& operator >>(istream& in, Pizza& pizza)
+istream& operator >> (istream& in, Pizza& pizza)
 {
-	cout<<"ID: ";
+	if(pizza.verbose){
+		cout<<"ID: ";
+	}
 	in>>pizza.ID;
-	cout<<"Price: ";
+	if(pizza.verbose){
+		cout<<"Price: ";
+	}
 	in>>pizza.price;
 
 	return in;
 }
->>>>>>> a8bf7059d9df22810c8fa6bd54be9ab501350072

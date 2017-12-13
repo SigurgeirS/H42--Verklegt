@@ -12,13 +12,11 @@ public:
     string get_name();
     friend istream& operator >> (istream& in, Location& location);
     friend ostream& operator << (ostream& out, const Location& location);
-    virtual ~Location();
-
-protected:
+    bool verbose;
 
 private:
-    string ID = "";
-    string name = "";
+    string ID;
+    string name;
 };
 
 #endif // LOCATION_H

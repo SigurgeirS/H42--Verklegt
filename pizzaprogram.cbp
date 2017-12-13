@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="pizzaprogram" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/pizzaprogram" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/pizzaprogram" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-fexceptions" />
+		</Compiler>
+		<Unit filename="Domain/Admin_domain.cpp" />
+		<Unit filename="Domain/Admin_domain.h" />
+		<Unit filename="Exceptions/Invalid_base/InvalidBase.h" />
+		<Unit filename="Exceptions/Invalid_base/InvalidBaseCount.cpp" />
+		<Unit filename="Exceptions/Invalid_base/InvalidBaseCount.h" />
+		<Unit filename="Exceptions/Invalid_base/InvalidBaseName.cpp" />
+		<Unit filename="Exceptions/Invalid_base/InvalidBaseName.h" />
+		<Unit filename="Exceptions/Invalid_base/InvalidBasePrice.cpp" />
+		<Unit filename="Exceptions/Invalid_base/InvalidBasePrice.h" />
+		<Unit filename="Exceptions/Invalid_location/InvalidLocationCount.cpp" />
+		<Unit filename="Exceptions/Invalid_location/InvalidLocationCount.h" />
+		<Unit filename="Exceptions/Invalid_location/InvalidLocationName.cpp" />
+		<Unit filename="Exceptions/Invalid_location/InvalidLocationName.h" />
+		<Unit filename="Exceptions/Invalid_menu/InvalidMenuCount.cpp" />
+		<Unit filename="Exceptions/Invalid_menu/InvalidMenuCount.h" />
+		<Unit filename="Exceptions/Invalid_menu/InvalidPizzaMenu.h" />
+		<Unit filename="Exceptions/Invalid_menu/InvalidPizzaMenuName.cpp" />
+		<Unit filename="Exceptions/Invalid_menu/InvalidPizzaMenuName.h" />
+		<Unit filename="Exceptions/invalid_size/InvalidSize.cpp" />
+		<Unit filename="Exceptions/invalid_size/InvalidSize.h" />
+		<Unit filename="Exceptions/invalid_size/InvalidSizeCount.cpp" />
+		<Unit filename="Exceptions/invalid_size/InvalidSizeCount.h" />
+		<Unit filename="Exceptions/invalid_size/Invalidsizeprice.cpp" />
+		<Unit filename="Exceptions/invalid_size/Invalidsizeprice.h" />
+		<Unit filename="Exceptions/invalid_topping/InvalidToppingCount.cpp" />
+		<Unit filename="Exceptions/invalid_topping/InvalidToppingCount.h" />
+		<Unit filename="Exceptions/invalid_topping/InvalidToppingID.cpp" />
+		<Unit filename="Exceptions/invalid_topping/InvalidToppingID.h" />
+		<Unit filename="Exceptions/invalid_topping/InvalidToppingName.cpp" />
+		<Unit filename="Exceptions/invalid_topping/InvalidToppingName.h" />
+		<Unit filename="Exceptions/invalid_topping/InvalidToppingPrice.cpp" />
+		<Unit filename="Exceptions/invalid_topping/InvalidToppingPrice.h" />
+		<Unit filename="Model/Base.cpp" />
+		<Unit filename="Model/Base.h" />
+		<Unit filename="Model/Location.cpp" />
+		<Unit filename="Model/Location.h" />
+		<Unit filename="Model/Otherproducts.cpp" />
+		<Unit filename="Model/Otherproducts.h" />
+		<Unit filename="Model/Pizza.h" />
+		<Unit filename="Model/Pizza_menu.cpp" />
+		<Unit filename="Model/Pizza_menu.h" />
+		<Unit filename="Model/Pizza_size.cpp" />
+		<Unit filename="Model/Pizza_size.h" />
+		<Unit filename="Model/Topping.cpp" />
+		<Unit filename="Model/Topping.h" />
+		<Unit filename="Repo/Find_line.cpp" />
+		<Unit filename="Repo/Find_line.h" />
+		<Unit filename="Repo/LocationRepository.cpp" />
+		<Unit filename="Repo/LocationRepository.h" />
+		<Unit filename="Repo/OrderRepository.cpp" />
+		<Unit filename="Repo/OrderRepository.h" />
+		<Unit filename="Repo/OtherproductsRepository.h" />
+		<Unit filename="Repo/PizzaRepository.cpp" />
+		<Unit filename="Repo/PizzaRepository.h" />
+		<Unit filename="Repo/Pizza_menuRepository.cpp" />
+		<Unit filename="Repo/Pizza_menuRepository.h" />
+		<Unit filename="UI/MainUI.cpp" />
+		<Unit filename="UI/MainUI.h" />
+		<Unit filename="UI/OrderUI.cpp" />
+		<Unit filename="UI/OrderUI.h" />
+		<Unit filename="UI/PizzaUI.cpp" />
+		<Unit filename="UI/PizzaUI.h" />
+		<Unit filename="UI/ToppingsUI.cpp" />
+		<Unit filename="UI/ToppingsUI.h" />
+		<Unit filename="main.cpp" />
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

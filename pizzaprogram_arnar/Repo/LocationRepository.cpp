@@ -1,19 +1,41 @@
 #include "LocationRepository.h"
 
-LocationRepository::LocationRepository()
-{
-    //ctor
+LocationRepository::locationRepository(){
+	//constructor
 }
 
-LocationRepository::~LocationRepository()
-{
-    //dtor
+void LocationRepository::storeLocation(const Location& location){
+
+	ofstream fout;
+	fout.open("locationlist.txt", ios::app);
+	if(fout.is_open()){
+
+		fout << location;
+
+		fout.close();
+	}else{
+		//throw exception
+	}
 }
 
-void LocationRepository::storelocation(const Location& location)
-{
-    ofstream fout;
-    fout.open("Pizza_locations.txt", ios::app);
-    fout << location;
-    fout.close();
+vector<Location> LocationRepository::fetchLocation(){
+
+	vector<Location> locations;
+	ifstream fin;
+
+	fin.open("locationlist.txt");
+
+	if(fin.is_open()){
+		Location location;
+		location.verbose = false;
+		while(fin.good()){
+			fin>>location;
+			locations.push_back(location);
+		}
+		locations.pop_back();
+	}else{
+		cout<<"could not open file"<<endl;
+	}
+	return locations;
 }
+
