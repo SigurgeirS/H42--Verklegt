@@ -8,17 +8,18 @@ class Base
 {
     public:
         Base();
-        friend ostream& operator << (ostream& out, Base base);
+        friend ostream& operator << (ostream& out, const Base& base);
         friend istream& operator >>(istream& in, Base& base);
         string get_id();
-        virtual ~Base();
+	bool verbose;
 
     protected:
 
     private:
         string ID;
         double price;
-        string base_name;
+        string name;
 };
 
 #endif // BASE_H
+

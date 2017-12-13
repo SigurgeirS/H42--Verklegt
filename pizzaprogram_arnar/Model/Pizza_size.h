@@ -12,10 +12,7 @@ class Pizza_size
 	string getID();
         friend istream& operator >> (istream& in, Pizza_size& pizza_size);
         friend ostream& operator << (ostream& out,const Pizza_size& pizza_size);
-        virtual ~Pizza_size();
-
-    protected:
-
+	bool verbose;
     private:
         string ID;
         double price;

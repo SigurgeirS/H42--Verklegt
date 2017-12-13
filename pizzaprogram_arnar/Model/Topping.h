@@ -7,12 +7,12 @@ class Topping
 {
 public:
     Topping();
-    friend ostream& operator << (ostream& out, const Topping topping);
+    friend ostream& operator << (ostream& out, const Topping& topping);
     friend istream& operator >>(istream& in, Topping& topping);
     string get_id();
     string get_name();
     double get_price();
-    virtual ~Topping();
+    bool verbose;
 
 private:
     string name;

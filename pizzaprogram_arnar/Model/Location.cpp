@@ -5,11 +5,7 @@ Location::Location()
 {
     this->ID = "";
     this->name = "";
-}
-
-Location::~Location()
-{
-    //dtor
+    this->verbose = true;
 }
 
 string Location::get_id()
@@ -24,15 +20,26 @@ string Location::get_name()
 
 istream& operator >> (istream& in, Location& location)
 {
-    cout << "Type in a location ID: " << endl;
-    in >> location.ID;
-    cout << "Type in a location name: " << endl;
-    in >> location.name;
-    return in;
+	if(location.verbose){
+    		cout << "Type in a location ID: " << endl;
+	}
+    	in >> location.ID;
+    	if(location.verbose){
+		cout << "Type in a location name: " << endl;
+	}
+	in >> location.name;
+
+	return in;
 }
 
 ostream& operator << (ostream& out, const Location& location)
 {
-    out << location.ID << "," << location.name << "," << endl;
+	if(location.verbose == false){
+    		out << location.ID << endl << location.name << endl;
+	}
+	if(location.verbose){
+		out<<"ID: "<<location.ID<<endl<<"Name: "<<location.name<<endl;
+	}
+
     return out;
 }
